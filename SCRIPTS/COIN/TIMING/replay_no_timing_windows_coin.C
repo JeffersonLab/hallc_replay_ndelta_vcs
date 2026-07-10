@@ -260,7 +260,7 @@ void replay_no_timing_windows_coin (Int_t RunNumber = 0, Int_t MaxEvent = 0, Int
   run->Print();
 
   // Define the analysis parameters
-  TString ROOTFileName = Form(ROOTFileNamePattern, RunNumber, MaxEvent);
+  TString ROOTFileName = Form(ROOTFileNamePattern, RunNumber, MaxEvent, Segment);
   analyzer->SetCountMode(2);  // 0 = counter is # of physics triggers
                               // 1 = counter is # of all decode reads
                               // 2 = counter is event number

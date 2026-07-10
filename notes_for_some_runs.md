@@ -18,11 +18,11 @@
 * 26155
   + Trigger widths changed: https://logbooks.jlab.org/entry/4482104
   + Delay adjusted https://logbooks.jlab.org/entry/4482119
-* 26165
-  + SHMS 1X used 5,6,7 and 2X used 5,6,7,8 https://logbooks.jlab.org/entry/4482320
 * 26161
   + HMS hodoscope HV reduced by 50 V https://logbooks.jlab.org/entry/4482276
   + The reason is elaborated in https://logbooks.jlab.org/entry/4482336
+* 26165
+  + SHMS 1X used 5,6,7 and 2X used 5,6,7,8 https://logbooks.jlab.org/entry/4482320
 * 26190
   + hcvme01 FADC250 offset change and width https://logbooks.jlab.org/entry/4482537
   + HMS window changed by 25 ns during the 1d setting https://logbooks.jlab.org/entry/4482569

@@ -255,7 +255,7 @@ void replay_no_reference_times_coin  (Int_t RunNumber = 0, Int_t MaxEvent = 0, I
 
   // Define the run(s) that we want to analyze.
   // We just set up one, but this could be many.
-  THcRun* run = new THcRun( pathList, Form(RunFileNamePattern, RunNumber) );
+  THcRun* run = new THcRun( pathList, Form(RunFileNamePattern, RunNumber, Segment) );
 
   // Set to read in Hall C run database parameters
   run->SetRunParamClass("THcRunParameters");
@@ -267,7 +267,7 @@ void replay_no_reference_times_coin  (Int_t RunNumber = 0, Int_t MaxEvent = 0, I
   run->Print();
 
   // Define the analysis parameters
-  TString ROOTFileName = Form(ROOTFileNamePattern, RunNumber, MaxEvent);
+  TString ROOTFileName = Form(ROOTFileNamePattern, RunNumber, MaxEvent, Segment);
   analyzer->SetCountMode(2);  // 0 = counter is # of physics triggers
                               // 1 = counter is # of all decode reads
                               // 2 = counter is event number
