@@ -33,7 +33,7 @@ it" means "keep the reference value," not "silently disable the cut."
 Reference: pass --reference-run to seed every channel from a previously
 generated tcoin_<run>.param / h_reftime_cut_coindaq_<run>.param /
 p_reftime_cut_<run>.param. If you don't, the app falls back to the
-standard hallc_replay layout under --param-dir (default ./PARAM):
+standard hallc_replay layout under --param-dir (default ../../PARAM):
     <param-dir>/TRIG/tcoin.param
     <param-dir>/HMS/GEN/h_reftime_cut_coindaq.param
     <param-dir>/SHMS/GEN/p_reftime_cut.param
@@ -388,7 +388,7 @@ class ChannelState:
 
 class ReftimeCutApp:
     def __init__(self, run, channels: list[tuple[str, str]], arrays, want_branches,
-                 progress_path: Path = None, reference: dict = None):
+                 progress_path: Path = None, reference: dict = None, interactive: bool = True):
         self.run = run
         self.channels = channels  # [(name, kind), ...] in order
         self.arrays = arrays
@@ -425,6 +425,19 @@ class ReftimeCutApp:
             print(f"Seeded {n_seeded} channel(s) from the {self.reference['label']} reference "
                   f"-- anything you don't click keeps that value. Use 'Use Reference' to "
                   f"explicitly (re)accept one, or just click to override it.")
+
+        self.interactive = interactive
+        if not interactive:
+            # non-interactive (--non-interactive) mode: no GUI needed at all -- every channel
+            # is already fully resolved (reference or hardcoded default), so there's nothing
+            # left to click through. save_summary_pdf() doesn't touch self.fig/self.ax.
+            self.fig = None
+            self.ax = None
+            self.info_ax = None
+            self.finished = True
+            self._current_source = "manual"
+            self._fresh_visit = True
+            return
 
         self.fig = plt.figure(figsize=(15, 7.5))
         self.fig.suptitle(f"Run {run} -- Hall C Reference-Time / TDC Window Cut Tool",
@@ -832,6 +845,8 @@ class ReftimeCutApp:
         plt.close(self.fig)
 
     def run_interactive(self):
+        if not self.interactive:
+            return  # nothing to show -- non-interactive mode already resolved everything
         try:
             plt.show()  # blocks until the window is closed
         except Exception as e:
@@ -935,7 +950,8 @@ class ReftimeCutApp:
                     self._plot_channel_static(ax, name, kind, final_values)
                 for ax in axes[len(chunk):]:
                     ax.axis("off")
-                fig.suptitle(f"Run {self.run} -- Reference-time / TDC window cuts "
+                ref_note = f" | reference: {self.reference['label']}" if self.reference is not None else ""
+                fig.suptitle(f"Run {self.run} -- Reference-time / TDC window cuts{ref_note} "
                              f"(page {page + 1}/{n_pages})", fontsize=12, fontweight="bold")
                 fig.tight_layout(rect=[0, 0, 1, 0.96])
                 pdf.savefig(fig)
@@ -984,7 +1000,8 @@ class ReftimeCutApp:
         if ref_lo is not None or ref_hi is not None:
             ref_lo_s = f"{ref_lo:.1f}" if ref_lo is not None else "-"
             ref_hi_s = f"{ref_hi:.1f}" if ref_hi is not None else "-"
-            label_lines.append(f"ref: {ref_lo_s} / {ref_hi_s}")
+            ref_tag = f" ({self.reference['label']})" if self.reference is not None else ""
+            label_lines.append(f"ref{ref_tag}: {ref_lo_s} / {ref_hi_s}")
         lo_s = f"{lo:.1f}" if lo is not None else "-"
         hi_s = f"{hi:.1f}" if hi is not None else "-"
         label_lines.append(f"cut: {lo_s} / {hi_s}{src_tag}")
@@ -1033,7 +1050,13 @@ def main():
                           "reference when --reference-run isn't given -- expects "
                           "<param-dir>/TRIG/tcoin.param, <param-dir>/HMS/GEN/"
                           "h_reftime_cut_coindaq.param, and <param-dir>/SHMS/GEN/"
-                          "p_reftime_cut.param. Default: ./PARAM")
+                          "p_reftime_cut.param. Default: ../../PARAM")
+    ap.add_argument("--non-interactive", action="store_true",
+                     help="Skip the GUI entirely. Every channel is taken as-is from the "
+                          "reference (--reference-run, or the vanilla PARAM/ defaults), with "
+                          "no manual review, and only the summary PDF is written -- a quick "
+                          "visual sanity check of how the reference cuts land on this run's "
+                          "data, without generating any .param files.")
     args = ap.parse_args()
 
     default_path = Path(
@@ -1062,7 +1085,10 @@ def main():
           f"({len(channels)} channels requested, {len(want_branches)} found) ...")
     arrays = tree.arrays(all_branch_names, library="np")
 
-    backend = _init_backend(args.backend)
+    if args.non_interactive:
+        backend = _init_backend("Agg")
+    else:
+        backend = _init_backend(args.backend)
     print(f"Using matplotlib backend: {backend}")
 
     progress_path = out_dir / f"{args.run}_progress.json"
@@ -1106,13 +1132,28 @@ def main():
         else:
             reference = load_reference(tcoin_v, hms_v, shms_v)
             if reference is not None:
-                reference["label"] = "defaults (PARAM/)"
+                reference["label"] = "vanilla defaults"
                 print(f"No --reference-run given; using vanilla defaults from {param_dir}: "
                       f"{len(reference['window'])} window entries, "
                       f"{len(reference['channel_lo'])} cut values.")
 
     app = ReftimeCutApp(args.run, channels, arrays, want_branches,
-                        progress_path=progress_path, reference=reference)
+                        progress_path=None if args.non_interactive else progress_path,
+                        reference=reference, interactive=not args.non_interactive)
+
+    if args.non_interactive:
+        if reference is None:
+            print("\nWARNING: --non-interactive with no reference available (neither "
+                  "--reference-run nor vanilla PARAM/ defaults found) -- every channel will "
+                  "just show the hardcoded (0.0 / (0, 100000)) fallback, which isn't very "
+                  "useful for inspecting cut quality.")
+        pdf_path = out_dir / f"{args.run}_reftime_summary.pdf"
+        app.save_summary_pdf(pdf_path, per_page=10, ncols=2)
+        print(f"\n--non-interactive: wrote {pdf_path} only. No .param files were written -- "
+              f"this is inspection-only. Re-run without --non-interactive to review and "
+              f"finalize into real .param files.")
+        return
+
     print("\nInteractive window opened.")
     print("  Click twice per TDC channel (lo, hi), once per ADC channel (lo).")
     print("  'Skip to next NEEDED >>' jumps between the ~20 channels that feed a .param value.")
