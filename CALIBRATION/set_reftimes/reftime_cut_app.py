@@ -1028,7 +1028,7 @@ def main():
     ap.add_argument("--reference-dir", default=None,
                      help="Directory to look for --reference-run's param files in "
                           "(default: --out-dir).")
-    ap.add_argument("--param-dir", default="PARAM",
+    ap.add_argument("--param-dir", default="../../PARAM",
                      help="hallc_replay-style PARAM directory used for the vanilla default "
                           "reference when --reference-run isn't given -- expects "
                           "<param-dir>/TRIG/tcoin.param, <param-dir>/HMS/GEN/"
