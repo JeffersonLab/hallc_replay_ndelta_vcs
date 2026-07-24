@@ -202,7 +202,7 @@ def draw_mult_histograms(ax, d, rng, bins, raw_lw=0.8, mult_lw=0.9, fontsize=Non
 
 def format_array(values, per_line=10, indent="\t\t\t\t  "):
     def fmt(v):
-        return f"{v:.0f}" if float(v).is_integer() else f"{v:.0f}"
+        return f"{v:.0f}" if float(v).is_integer() else f"{v:.2f}"
     rows = []
     for i in range(0, len(values), per_line):
         rows.append(", ".join(fmt(v) for v in values[i:i + per_line]))
