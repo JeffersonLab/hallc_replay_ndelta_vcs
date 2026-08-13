@@ -218,7 +218,8 @@ def survey_row(run, config, tcoin_path, hms_path, shms_path):
         if lo is None:
             lo = win[0]
         row[f"{name}_min"] = lo
-        row[f"{name}_max"] = win[1]
+        row[f"{name}_max"] = win[1] if (win[1]>0) & (win[1]<=100000.0) else 100000.0
+        assert row[f"{name}_max"] > row[f"{name}_min"]
 
     for name in ADC_CHANNELS:
         p0 = PARAM_MAP[name][0]
@@ -360,7 +361,7 @@ rows = [survey_row(run, config, tcoin_p, hms_p, shms_p)
 df = pd.DataFrame(rows).set_index("run").sort_index()
 # df.reset_index(inplace = True)
 
-#write_param_files_for_configuration(df, 4)
+write_param_files_for_configuration(df, 51)
 
 run_configurations          = run_db["Configuration"].to_numpy()
 run_configurations_next     = np.array([0] + list(run_configurations[:-1]))
