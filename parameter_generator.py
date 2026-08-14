@@ -7,6 +7,13 @@ from datetime import datetime
 import os
 import math
 from copy import copy
+
+'''
+Find the param files per configuration and use that to 
+generate replay-friendly database set and parameters.
+If multiple files are found for one configuration, use the most conservative set.
+'''
+
 def build_config_row(group):
     kin_setting = group["Kinematics Setting"].iloc[0]
     is_production = bool(production_pattern.match(str(kin_setting).strip()))
