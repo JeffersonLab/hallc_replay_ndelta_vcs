@@ -43,8 +43,8 @@ cat > "$jobfile" <<EOF
 #SBATCH --job-name=replay_${runnum}
 #SBATCH --time=24:00:00
 #SBATCH --gres=disk:1G
-#SBATCH --output=${logdir}/replay_${runnum}.out
-#SBATCH --error=${logdir}/replay_${runnum}.err
+#SBATCH --output=${logdir}/replay_calib_${runnum}.out
+#SBATCH --error=${logdir}/replay_calib_${runnum}.err
 
 echo "Running run ${runnum} segment ${seg} on \$(hostname)"
 
