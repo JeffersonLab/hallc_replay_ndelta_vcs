@@ -172,7 +172,7 @@ TString DescribeChannelUsage(const TString& channel, bool isTdc,
     auto g = groups.find(f);
     if (g == groups.end()) continue;
     if (out.Length()) out += ", ";
-    out += TString(f) + "\u2014";
+    out += TString(f) + "-";
     for (size_t i = 0; i < g->second.size(); ++i) {
       if (i) out += ", ";
       out += g->second[i];
@@ -533,6 +533,16 @@ HistSet& GetOrBuildHist(const TString& name, const TString& kind) {
   double xmax = gTree->GetMaximum(rawBranch);
   bool usedDefaultRange = (xmax <= xmin);
   if (usedDefaultRange) { xmin = kDefaultLo; xmax = kDefaultHi; }  // degenerate -> default span
+  
+// Small margin beyond the observed data extent (same idea as the earlier
+  // Python version's 0.02x-range padding): without this, if a channel's real
+  // peak sits right at the data's observed max, the histogram's plotted
+  // range ends exactly there -- leaving no room to click a "max" cut
+  // boundary past the peak at all. This is purely display/binning padding;
+  // it doesn't touch the separate (0, 100000) "no cut" sentinel used
+  // elsewhere for stored cut values.
+  double margin = 0.02 * std::max(xmax - xmin, 1.0);
+  xmax += margin;
 
   build(xmin, xmax);
 
@@ -1428,6 +1438,15 @@ void reftime_cut_app(
   if (nonInteractive) gROOT->SetBatch(kTRUE);
   gStyle->SetOptStat(0);  // no per-histogram stats box -- the legend covers what's needed
   gQaThreshold = qaThreshold;
+
+  // gHistCache/gZoomedHistPool are plain static globals that otherwise persist
+  // across repeated calls within the same ROOT session -- without clearing
+  // them here, editing GetOrBuildHist()/BuildZoomedHistSet() and re-running
+  // this macro without a full ROOT restart would silently keep using the
+  // OLD cached histograms, since GetOrBuildHist() returns early on a cache
+  // hit with no way to know the code that built them has changed.
+  gHistCache.clear();
+  ClearZoomedHistPool();
 
   gRun = run;
   gOutDir = outDir;
