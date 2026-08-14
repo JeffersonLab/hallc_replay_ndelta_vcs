@@ -300,7 +300,7 @@ paero_adcrefcut={math.floor(paero_adc):d}
 pcal_adcrefcut={math.floor(pcal_adc):d}
 """
 
-def write_param_files_for_configuration(df, configuration, out_run=None, out_dir="."):
+def write_param_files_for_configuration(df, configuration, out_run=None, out_dir_coin=".", out_dir_hms = ".", out_dir_shms = "."):
     """Generate tcoin_<label>.param, h_reftime_cut_coindaq_<label>.param, and
     p_reftime_cut_<label>.param from EVERY row of the survey DataFrame `df`
     with df.configuration == configuration, taking the most conservative
@@ -344,9 +344,9 @@ def write_param_files_for_configuration(df, configuration, out_run=None, out_dir
                                      v("phgcer_adcrefcut"), v("paero_adcrefcut"), v("pcal_adcrefcut"))
 
     paths = {
-        os.path.join(out_dir, f"tcoin_{label}.param"): tcoin_text,
-        os.path.join(out_dir, f"h_reftime_cut_coindaq_{label}.param"): hms_text,
-        os.path.join(out_dir, f"p_reftime_cut_{label}.param"): shms_text,
+        os.path.join(out_dir_coin, f"tcoin_{label}.param"): tcoin_text,
+        os.path.join(out_dir_hms, f"h_reftime_cut_coindaq_{label}.param"): hms_text,
+        os.path.join(out_dir_shms, f"p_reftime_cut_{label}.param"): shms_text,
     }
     for path, text in paths.items():
         with open(path, "w") as f:
@@ -361,7 +361,6 @@ rows = [survey_row(run, config, tcoin_p, hms_p, shms_p)
 df = pd.DataFrame(rows).set_index("run").sort_index()
 # df.reset_index(inplace = True)
 
-write_param_files_for_configuration(df, 51)
 
 run_configurations          = run_db["Configuration"].to_numpy()
 run_configurations_next     = np.array([0] + list(run_configurations[:-1]))
@@ -376,25 +375,27 @@ for i in range(len(run_period_mins)):
   run_period_max = run_period_maxs[i]
   this_configuration = run_db.loc[(run_db["Run Number"] >= run_period_min) & (run_db["Run Number"] <= run_period_max), "Configuration"].unique()
   assert len(this_configuration) == 1
+ 
   this_configuration = this_configuration[0]
+  if ~np.isin(this_configuration, df.configuration):#target boiling studies---the same with 90
+    continue
+  write_param_files_for_configuration(df, this_configuration, out_dir_coin = "PARAM/TRIG", out_dir_hms = "PARAM/HMS/GEN", out_dir_shms = "PARAM/SHMS/GEN")
   this_experiment    = run_db.loc[(run_db["Run Number"] >= run_period_min) & (run_db["Run Number"] <= run_period_max), "Experiment"].unique()[0]
   this_kinematics    = run_db.loc[(run_db["Run Number"] >= run_period_min) & (run_db["Run Number"] <= run_period_max), "Kinematics Setting"].unique()[0]
   
-  if ~np.isin(this_configuration, df.configuration):
-    continue
   if i == 0:
     standard_database_txt = "#{}. {} {}\n".format(this_configuration, this_experiment, this_kinematics)
+  elif i == 90:
+    standard_database_txt = standard_database_txt+ "#{}. {} {} This includes configs 91, 92, 93, which are target boiling studies.\n".format(this_configuration, this_experiment, this_kinematics)
   else:
     standard_database_txt = standard_database_txt+ "#{}. {} {}\n".format(this_configuration, this_experiment, this_kinematics)
 
   standard_database_txt  = standard_database_txt+ "{}--{}\n".format(run_period_min, run_period_max)
-  standard_database_txt  = standard_database_txt + 'g_ctp_parm_filename       = "DBASE/COIN/general.param"\n'
+  standard_database_txt  = standard_database_txt + 'g_ctp_parm_filename       = "DBASE/COIN/general_{}.param"\n'.format(this_configuration)
   standard_database_txt  = standard_database_txt + 'g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"\n'
   standard_database_txt  = standard_database_txt + 'g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"\n'
   standard_database_txt  = standard_database_txt + 'g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_{}.param"\n\n'.format(this_configuration)
   
-
-  print(standard_database_txt)
 
   with open("DBASE/COIN/general.param", "r") as general_param_template:
     general_param_lines = general_param_template.readlines()
@@ -404,3 +405,5 @@ for i in range(len(run_period_mins)):
   general_param_this_run[51-1] = general_param_this_run[51-1].replace('.param', '_{}.param'.format(this_configuration))
   with open("DBASE/COIN/general_{}.param".format(this_configuration), "w") as general_param_file_this_run:
     general_param_file_this_run.writelines(general_param_this_run)
+print(standard_database_txt)
+
