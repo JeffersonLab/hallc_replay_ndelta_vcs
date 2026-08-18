@@ -1,101 +1,101 @@
-Configuration,Experiment,Kinematics Setting,Target,sample_run_numbers, Ref_Time_Assignee
-0,N-Delta,Carbon Elastics,Optics1,"[26092, 26107, 26116, 26120]", Sangbaek
-1,N-Delta,HMS Carbon SIEVE,Optics1,"[26132, 26135, 26136, 26138]", Sangbaek
-2,N-Delta,1H Elastics,4 cm LH2,"[26148, 26149, 26150]", Penn
-3,N-Delta,1H Elastics,4 cm LH2,"[26151, 26152, 26153, 26154]", Penn
-4,N-Delta,1H Elastics,4 cm LH2,"[26155, 26156, 26157]", Penn
-5,N-Delta,1d,4 cm LH2,[26169], Penn
-6,N-Delta,1d,4 cm LH2,[26193], Penn
-7,N-Delta,1d,4 cm Dummy,[26200], Penn
-8,N-Delta,2d,4 cm LH2,[26208], Penn
-9,N-Delta,2d,Dummy,[26222], Penn
-10,N-Delta,3d,4 cm LH2,[26235], Penn
-11,N-Delta,3d,4 cm Dummy,[26242], Penn
-12,N-Delta,4d,4 cm LH2,[26250], Penn
-13,N-Delta,4d,4 cm Dummy,[26259], Penn
-14,N-Delta,5d,4 cm LH2,[26266], Penn
-15,N-Delta,5d,4 cm Dummy,[26269], Penn
-16,N-Delta,6d,4 cm LH2,[26275], Penn
-17,N-Delta,6d,4 cm Dummy,[26278], Penn
-18,N-Delta,7d,4 cm LH2,[26279], Penn
-19,N-Delta,7d,4 cm LH2,[26288], Penn
-20,N-Delta,7d,4 cm Dummy,[26297], Penn
-21,N-Delta,1a,4 cm LH2,[26306], Penn
-22,N-Delta,1a,4 cm Dummy,[26310], Penn
-23,N-Delta,2a,4 cm LH2,[26314], Penn
-24,N-Delta,2a,4 cm Dummy,[26326], Penn
-25,N-Delta,3a,4 cm LH2,[26330], Penn
-26,N-Delta,3a,4 cm Dummy,[26336], Penn
-27,N-Delta,4a,4 cm LH2,[26342], Penn
-28,N-Delta,4a,4 cm Dummy,[26347], Penn
-29,N-Delta,5a,4 cm LH2,[26354], Penn
-30,N-Delta,5a,4 cm Dummy,[26356], Penn
-31,N-Delta,6a,4 cm LH2,[26358], Penn
-32,N-Delta,6a,4 cm LH2,[26364], Penn
-33,N-Delta,6a,4 cm Dummy,[26367], Penn
-34,N-Delta,7a,4 cm LH2,[26369], Penn
-35,N-Delta,7a,4 cm Dummy,[26372], Penn
-36,N-Delta,1b,4 cm LH2,[26382], Chathuri
-37,N-Delta,1b,4 cm Dummy,[26384], Chathuri
-38,N-Delta,2b,4 cm LH2,[26395], Chathuri
-39,N-Delta,2b,4 cm Dummy,[26397], Chathuri
-40,N-Delta,3b,4 cm LH2,[26401], Chathuri
-41,N-Delta,3b,4 cm Dummy,[26403], Chathuri
-42,N-Delta,4b,4 cm LH2,[26408], Chathuri
-43,N-Delta,4b,4 cm Dummy,[26409], Chathuri
-44,N-Delta,5b,4 cm LH2,[26412], Chathuri
-45,N-Delta,5b,4 cm Dummy,[26414], Chathuri
-46,N-Delta,6b,4 cm LH2,[26417], Chathuri
-47,N-Delta,6b,4 cm Dummy,[26420], Chathuri
-48,N-Delta,7b,4 cm LH2,[26426], Chathuri
-49,N-Delta,7b,4 cm Dummy,[26427], Chathuri
-50,N-Delta,1c,4 cm LH2,[26434], Thareendra
-51,N-Delta,1c,4 cm Dummy,[26436], Thareendra
-52,N-Delta,SHMS Delta Scan,Optics1,"[26483, 26484, 26485, 26486, 26487, 26488]", Sangbaek
-53,N-Delta,HMS SIEVE,Optics1,[26490], Sangbaek
-54,N-Delta,3c,4 cm LH2,[26493], Thareendra
-55,N-Delta,4c,4 cm LH2,[26501], Thareendra
-56,N-Delta,4c,4 cm Dummy,[26503], Thareendra
-57,N-Delta,5c,4 cm Dummy,[26505], Thareendra
-58,N-Delta,5c,4 cm LH2,[26507], Thareendra
-59,N-Delta,2c,4 cm LH2,[26525], Thareendra
-60,N-Delta,2c,4 cm Dummy,[26528], Thareendra
-61,N-Delta,6c,4 cm LH2,[26539], Thareendra
-62,N-Delta,7c,4 cm LH2,[26549], Thareendra
-63,N-Delta,3c,4 cm Dummy,[26550], Thareendra
-64,N-Delta,1e,4 cm Dummy,[26555], Thareendra
-65,N-Delta,1e,4 cm LH2,[26556], Thareendra
-66,VCS2,1a,10 cm dummy,[26567], Nazmus
-67,VCS2,1a,10 cm LH2,[26581], Nazmus
-68,VCS2,1a,10 cm Dummy,[26589], Nazmus
-69,VCS2,2a,10 cm LH2,[26607], Nazmus
-70,VCS2,2a,10 cm Dummy,[26594], Nazmus
-71,VCS2,2a,10 cm LH2,[26617], Nazmus
-72,VCS2,3a,10 cm dummy,[26634], Nazmus
-73,VCS2,3a,10 cm LH2,[26640], Nazmus
-74,VCS2,3a,10 cm LH2,[26646], Nazmus
-75,VCS2,3a,10 cm LH2,[26677], Nazmus
-76,VCS2,4a,10 cm Dummy,[26699], Nazmus
-77,VCS2,4a,10 cm LH2,[26709], Nazmus
-78,VCS2,5a,10 cm Dummy,[26725], Nazmus
-79,VCS2,5a,10 cm LH2,[26732], Nazmus
-80,VCS2,6a,10 cm Dummy,[26750], Nazmus
-81,VCS2,6a,10 cm LH2,[26763], Nazmus
-82,VCS2,1c,10 cm Dummy,[26786], Suman
-83,VCS2,1c,10 cm LH2,[26772], Suman
-84,VCS2,1c,10 cm LH2,[26801], Suman
-85,VCS2,2c,10 cm Dummy,[26806], Suman
-86,VCS2,2c,10 cm LH2,[26825], Suman
-87,VCS2,3c,10 cm Dummy,[26831], Suman
-88,VCS2,3c,10 cm LH2,[26873], Suman
-89,VCS2,4c,10 cm Dummy,[26887], Suman
-90,VCS2,4c,10 cm LH2,[26953], Suman
+Configuration,Experiment,Kinematics Setting,Target,sample_run_numbers, Ref_Time_Assignee, Hodo_Time_Assignee
+0,N-Delta,Carbon Elastics,Optics1,"[26092, 26107, 26116, 26120]", Sangbaek, Sangbaek
+1,N-Delta,HMS Carbon SIEVE,Optics1,"[26132, 26135, 26136, 26138]", Sangbaek, N/A
+2,N-Delta,1H Elastics,4 cm LH2,"[26148, 26149, 26150]", Penn, N/A
+3,N-Delta,1H Elastics,4 cm LH2,"[26151, 26152, 26153, 26154]", Penn, N/A
+4,N-Delta,1H Elastics,4 cm LH2,"[26155, 26156, 26157]", Penn, N/A
+5,N-Delta,1d,4 cm LH2,[26169], Penn, Sangbaek
+6,N-Delta,1d,4 cm LH2,[26193], Penn, N/A
+7,N-Delta,1d,4 cm Dummy,[26200], Penn, N/A
+8,N-Delta,2d,4 cm LH2,[26208], Penn, N/A
+9,N-Delta,2d,Dummy,[26222], Penn, N/A
+10,N-Delta,3d,4 cm LH2,[26235], Penn, N/A
+11,N-Delta,3d,4 cm Dummy,[26242], Penn, N/A
+12,N-Delta,4d,4 cm LH2,[26250], Penn, N/A
+13,N-Delta,4d,4 cm Dummy,[26259], Penn, N/A
+14,N-Delta,5d,4 cm LH2,[26266], Penn, N/A
+15,N-Delta,5d,4 cm Dummy,[26269], Penn, N/A
+16,N-Delta,6d,4 cm LH2,[26275], Penn, N/A
+17,N-Delta,6d,4 cm Dummy,[26278], Penn, N/A
+18,N-Delta,7d,4 cm LH2,[26279], Penn, N/A
+19,N-Delta,7d,4 cm LH2,[26288], Penn, N/A
+20,N-Delta,7d,4 cm Dummy,[26297], Penn, N/A
+21,N-Delta,1a,4 cm LH2,[26306], Penn, N/A
+22,N-Delta,1a,4 cm Dummy,[26310], Penn, N/A
+23,N-Delta,2a,4 cm LH2,[26314], Penn, N/A
+24,N-Delta,2a,4 cm Dummy,[26326], Penn, N/A
+25,N-Delta,3a,4 cm LH2,[26330], Penn, N/A
+26,N-Delta,3a,4 cm Dummy,[26336], Penn, N/A
+27,N-Delta,4a,4 cm LH2,[26342], Penn, N/A
+28,N-Delta,4a,4 cm Dummy,[26347], Penn, N/A
+29,N-Delta,5a,4 cm LH2,[26354], Penn, N/A
+30,N-Delta,5a,4 cm Dummy,[26356], Penn, N/A
+31,N-Delta,6a,4 cm LH2,[26358], Penn, N/A
+32,N-Delta,6a,4 cm LH2,[26364], Penn, N/A
+33,N-Delta,6a,4 cm Dummy,[26367], Penn, N/A
+34,N-Delta,7a,4 cm LH2,[26369], Penn, Penn
+35,N-Delta,7a,4 cm Dummy,[26372], Penn, N/A
+36,N-Delta,1b,4 cm LH2,[26382], Chathuri, Chathuri
+37,N-Delta,1b,4 cm Dummy,[26384], Chathuri, N/A
+38,N-Delta,2b,4 cm LH2,[26395], Chathuri, N/A
+39,N-Delta,2b,4 cm Dummy,[26397], Chathuri, N/A
+40,N-Delta,3b,4 cm LH2,[26401], Chathuri, N/A
+41,N-Delta,3b,4 cm Dummy,[26403], Chathuri, N/A
+42,N-Delta,4b,4 cm LH2,[26408], Chathuri, N/A
+43,N-Delta,4b,4 cm Dummy,[26409], Chathuri, N/A
+44,N-Delta,5b,4 cm LH2,[26412], Chathuri, N/A
+45,N-Delta,5b,4 cm Dummy,[26414], Chathuri, N/A
+46,N-Delta,6b,4 cm LH2,[26417], Chathuri, N/A
+47,N-Delta,6b,4 cm Dummy,[26420], Chathuri, N/A
+48,N-Delta,7b,4 cm LH2,[26426], Chathuri, N/A
+49,N-Delta,7b,4 cm Dummy,[26427], Chathuri, N/A
+50,N-Delta,1c,4 cm LH2,[26434], Thareendra, N/A
+51,N-Delta,1c,4 cm Dummy,[26436], Thareendra, N/A
+52,N-Delta,SHMS Delta Scan,Optics1,"[26483, 26484, 26485, 26486, 26487, 26488]", Sangbaek, N/A
+53,N-Delta,HMS SIEVE,Optics1,[26490], Sangbaek, N/A
+54,N-Delta,3c,4 cm LH2,[26493], Thareendra, N/A
+55,N-Delta,4c,4 cm LH2,[26501], Thareendra, N/A
+56,N-Delta,4c,4 cm Dummy,[26503], Thareendra, N/A
+57,N-Delta,5c,4 cm Dummy,[26505], Thareendra, N/A
+58,N-Delta,5c,4 cm LH2,[26507], Thareendra, N/A
+59,N-Delta,2c,4 cm LH2,[26525], Thareendra, N/A
+60,N-Delta,2c,4 cm Dummy,[26528], Thareendra, N/A
+61,N-Delta,6c,4 cm LH2,[26539], Thareendra, N/A
+62,N-Delta,7c,4 cm LH2,[26549], Thareendra, Thareendra
+63,N-Delta,3c,4 cm Dummy,[26550], Thareendra, N/A
+64,N-Delta,1e,4 cm Dummy,[26555], Thareendra, N/A
+65,N-Delta,1e,4 cm LH2,[26556], Thareendra, N/A
+66,VCS2,1a,10 cm dummy,[26567], Nazmus, Nazmus
+67,VCS2,1a,10 cm LH2,[26581], Nazmus, N/A
+68,VCS2,1a,10 cm Dummy,[26589], Nazmus, N/A
+69,VCS2,2a,10 cm LH2,[26607], Nazmus, N/A
+70,VCS2,2a,10 cm Dummy,[26594], Nazmus, N/A
+71,VCS2,2a,10 cm LH2,[26617], Nazmus, N/A
+72,VCS2,3a,10 cm dummy,[26634], Nazmus, N/A
+73,VCS2,3a,10 cm LH2,[26640], Nazmus, N/A
+74,VCS2,3a,10 cm LH2,[26646], Nazmus, N/A
+75,VCS2,3a,10 cm LH2,[26677], Nazmus, N/A
+76,VCS2,4a,10 cm Dummy,[26699], Nazmus, N/A
+77,VCS2,4a,10 cm LH2,[26709], Nazmus, N/A
+78,VCS2,5a,10 cm Dummy,[26725], Nazmus, N/A
+79,VCS2,5a,10 cm LH2,[26732], Nazmus, N/A
+80,VCS2,6a,10 cm Dummy,[26750], Nazmus, N/A
+81,VCS2,6a,10 cm LH2,[26763], Nazmus, N/A
+82,VCS2,1c,10 cm Dummy,[26786], Suman, N/A
+83,VCS2,1c,10 cm LH2,[26772], Suman, N/A
+84,VCS2,1c,10 cm LH2,[26801], Suman, N/A
+85,VCS2,2c,10 cm Dummy,[26806], Suman, N/A
+86,VCS2,2c,10 cm LH2,[26825], Suman, N/A
+87,VCS2,3c,10 cm Dummy,[26831], Suman, N/A
+88,VCS2,3c,10 cm LH2,[26873], Suman, N/A
+89,VCS2,4c,10 cm Dummy,[26887], Suman, N/A
+90,VCS2,4c,10 cm LH2,[26953], Suman, N/A
 91,VCS2,Current Scan,10 cm LH2,"[26904, 26907, 26910, 26913]", N/A
 92,VCS2,Current Scan,10 cm Dummy,"[26920, 26921]", N/A
 93,VCS2,Current Scan,Carbon 3%,"[26922, 26925, 26927, 26941]", N/A
-94,VCS2,5c,10 cm Dummy,[26960], Suman
-95,VCS2,5c,10 cm LH2,[27001], Suman
-96,VCS2,6c,10 cm Dummy,[27012], Suman
-97,VCS2,6c,10 cm LH2,[27018], Suman
-98,VCS2,7c,10 cm Dummy,[27042], Suman
-99,VCS2,7c,10 cm LH2,[27064], Suman
+94,VCS2,5c,10 cm Dummy,[26960], Suman, N/A
+95,VCS2,5c,10 cm LH2,[27001], Suman, N/A
+96,VCS2,6c,10 cm Dummy,[27012], Suman, N/A
+97,VCS2,6c,10 cm LH2,[27018], Suman, N/A
+98,VCS2,7c,10 cm Dummy,[27042], Suman, N/A
+99,VCS2,7c,10 cm LH2,[27064], Suman, Suman
