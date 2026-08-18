@@ -82,7 +82,7 @@ Configuration,Experiment,Kinematics Setting,Target,sample_run_numbers, Ref_Time_
 80,VCS2,6a,10 cm Dummy,[26750], Nazmus, N/A
 81,VCS2,6a,10 cm LH2,[26763], Nazmus, N/A
 82,VCS2,1c,10 cm Dummy,[26786], Suman, N/A
-83,VCS2,1c,10 cm LH2,[26772], Suman, N/A
+83,VCS2,1c,10 cm LH2,[26772], Suman, Sangbaek
 84,VCS2,1c,10 cm LH2,[26801], Suman, N/A
 85,VCS2,2c,10 cm Dummy,[26806], Suman, N/A
 86,VCS2,2c,10 cm LH2,[26825], Suman, N/A
