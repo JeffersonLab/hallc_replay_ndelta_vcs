@@ -52,7 +52,7 @@ g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
 
 # phase 2 kinematics
-7430-99999
+7430-19999
 g_ctp_parm_filename       = "DBASE/COIN/general_7274.param"
 g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
@@ -69,10 +69,785 @@ g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin.param"
 
 # phase 2 kinematics
-26066-99999
+26066-26087
 g_ctp_parm_filename       = "DBASE/COIN/general.param"
 g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin.param"
 
+#0. N-Delta Carbon Elastics
+26088-26131
+g_ctp_parm_filename       = "DBASE/COIN/general_0.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_0.param"
 
+#1. N-Delta HMS Carbon SIEVE
+26132-26139
+g_ctp_parm_filename       = "DBASE/COIN/general_1.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_1.param"
+
+#2. N-Delta 1H Elastics
+26148-26150
+g_ctp_parm_filename       = "DBASE/COIN/general_2.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_2.param"
+
+#3. N-Delta 1H Elastics
+26151-26154
+g_ctp_parm_filename       = "DBASE/COIN/general_3.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_3.param"
+
+#4. N-Delta 1H Elastics
+26155-26157
+g_ctp_parm_filename       = "DBASE/COIN/general_4.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_4.param"
+
+#5. N-Delta 1d
+26165-26174
+g_ctp_parm_filename       = "DBASE/COIN/general_5.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_5.param"
+
+#6. N-Delta 1d
+26190-26197
+g_ctp_parm_filename       = "DBASE/COIN/general_6.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_6.param"
+
+#7. N-Delta 1d
+26199-26201
+g_ctp_parm_filename       = "DBASE/COIN/general_7.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_7.param"
+
+#8. N-Delta 2d
+26205-26221
+g_ctp_parm_filename       = "DBASE/COIN/general_8.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_8.param"
+
+#9. N-Delta 2d
+26222-26226
+g_ctp_parm_filename       = "DBASE/COIN/general_9.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_9.param"
+
+#10. N-Delta 3d
+26227-26239
+g_ctp_parm_filename       = "DBASE/COIN/general_10.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_10.param"
+
+#11. N-Delta 3d
+26240-26242
+g_ctp_parm_filename       = "DBASE/COIN/general_11.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_11.param"
+
+#12. N-Delta 4d
+26250-26257
+g_ctp_parm_filename       = "DBASE/COIN/general_12.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_12.param"
+
+#13. N-Delta 4d
+26258-26259
+g_ctp_parm_filename       = "DBASE/COIN/general_13.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_13.param"
+
+#14. N-Delta 5d
+26260-26268
+g_ctp_parm_filename       = "DBASE/COIN/general_14.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_14.param"
+
+#15. N-Delta 5d
+26269-26270
+g_ctp_parm_filename       = "DBASE/COIN/general_15.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_15.param"
+
+#16. N-Delta 6d
+26271-26277
+g_ctp_parm_filename       = "DBASE/COIN/general_16.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_16.param"
+
+#17. N-Delta 6d
+26278-26278
+g_ctp_parm_filename       = "DBASE/COIN/general_17.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_17.param"
+
+#18. N-Delta 7d
+26279-26279
+g_ctp_parm_filename       = "DBASE/COIN/general_18.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_18.param"
+
+#19. N-Delta 7d
+26286-26294
+g_ctp_parm_filename       = "DBASE/COIN/general_19.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_19.param"
+
+#20. N-Delta 7d
+26295-26297
+g_ctp_parm_filename       = "DBASE/COIN/general_20.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_20.param"
+
+#21. N-Delta 1a
+26302-26308
+g_ctp_parm_filename       = "DBASE/COIN/general_21.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_21.param"
+
+#22. N-Delta 1a
+26310-26311
+g_ctp_parm_filename       = "DBASE/COIN/general_22.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_22.param"
+
+#23. N-Delta 2a
+26314-26324
+g_ctp_parm_filename       = "DBASE/COIN/general_23.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_23.param"
+
+#24. N-Delta 2a
+26325-26326
+g_ctp_parm_filename       = "DBASE/COIN/general_24.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_24.param"
+
+#25. N-Delta 3a
+26327-26334
+g_ctp_parm_filename       = "DBASE/COIN/general_25.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_25.param"
+
+#26. N-Delta 3a
+26335-26336
+g_ctp_parm_filename       = "DBASE/COIN/general_26.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_26.param"
+
+#27. N-Delta 4a
+26337-26344
+g_ctp_parm_filename       = "DBASE/COIN/general_27.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_27.param"
+
+#28. N-Delta 4a
+26346-26347
+g_ctp_parm_filename       = "DBASE/COIN/general_28.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_28.param"
+
+#27. N-Delta 4a
+26348-26348
+g_ctp_parm_filename       = "DBASE/COIN/general_27.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_27.param"
+
+#29. N-Delta 5a
+26349-26355
+g_ctp_parm_filename       = "DBASE/COIN/general_29.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_29.param"
+
+#30. N-Delta 5a
+26356-26357
+g_ctp_parm_filename       = "DBASE/COIN/general_30.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_30.param"
+
+#31. N-Delta 6a
+26358-26359
+g_ctp_parm_filename       = "DBASE/COIN/general_31.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_31.param"
+
+#32. N-Delta 6a
+26361-26366
+g_ctp_parm_filename       = "DBASE/COIN/general_32.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_32.param"
+
+#33. N-Delta 6a
+26367-26368
+g_ctp_parm_filename       = "DBASE/COIN/general_33.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_33.param"
+
+#34. N-Delta 7a
+26369-26370
+g_ctp_parm_filename       = "DBASE/COIN/general_34.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_34.param"
+
+#35. N-Delta 7a
+26371-26372
+g_ctp_parm_filename       = "DBASE/COIN/general_35.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_35.param"
+
+#34. N-Delta 7a
+26373-26381
+g_ctp_parm_filename       = "DBASE/COIN/general_34.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_34.param"
+
+#36. N-Delta 1b
+26382-26382
+g_ctp_parm_filename       = "DBASE/COIN/general_36.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_36.param"
+
+#37. N-Delta 1b
+26384-26384
+g_ctp_parm_filename       = "DBASE/COIN/general_37.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_37.param"
+
+#36. N-Delta 1b
+26385-26389
+g_ctp_parm_filename       = "DBASE/COIN/general_36.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_36.param"
+
+#38. N-Delta 2b
+26390-26396
+g_ctp_parm_filename       = "DBASE/COIN/general_38.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_38.param"
+
+#39. N-Delta 2b
+26397-26397
+g_ctp_parm_filename       = "DBASE/COIN/general_39.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_39.param"
+
+#40. N-Delta 3b
+26398-26402
+g_ctp_parm_filename       = "DBASE/COIN/general_40.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_40.param"
+
+#41. N-Delta 3b
+26403-26403
+g_ctp_parm_filename       = "DBASE/COIN/general_41.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_41.param"
+
+#42. N-Delta 4b
+26405-26408
+g_ctp_parm_filename       = "DBASE/COIN/general_42.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_42.param"
+
+#43. N-Delta 4b
+26409-26409
+g_ctp_parm_filename       = "DBASE/COIN/general_43.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_43.param"
+
+#44. N-Delta 5b
+26410-26413
+g_ctp_parm_filename       = "DBASE/COIN/general_44.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_44.param"
+
+#45. N-Delta 5b
+26414-26414
+g_ctp_parm_filename       = "DBASE/COIN/general_45.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_45.param"
+
+#46. N-Delta 6b
+26416-26419
+g_ctp_parm_filename       = "DBASE/COIN/general_46.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_46.param"
+
+#47. N-Delta 6b
+26420-26420
+g_ctp_parm_filename       = "DBASE/COIN/general_47.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_47.param"
+
+#48. N-Delta 7b
+26421-26426
+g_ctp_parm_filename       = "DBASE/COIN/general_48.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_48.param"
+
+#49. N-Delta 7b
+26427-26427
+g_ctp_parm_filename       = "DBASE/COIN/general_49.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_49.param"
+
+#50. N-Delta 1c
+26428-26435
+g_ctp_parm_filename       = "DBASE/COIN/general_50.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_50.param"
+
+#51. N-Delta 1c
+26436-26437
+g_ctp_parm_filename       = "DBASE/COIN/general_51.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_51.param"
+
+#50. N-Delta 1c
+26439-26447
+g_ctp_parm_filename       = "DBASE/COIN/general_50.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_50.param"
+
+#52. N-Delta SHMS Delta Scan
+26448-26488
+g_ctp_parm_filename       = "DBASE/COIN/general_52.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_52.param"
+
+#53. N-Delta HMS SIEVE
+26490-26490
+g_ctp_parm_filename       = "DBASE/COIN/general_53.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_53.param"
+
+#54. N-Delta 3c
+26492-26497
+g_ctp_parm_filename       = "DBASE/COIN/general_54.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_54.param"
+
+#55. N-Delta 4c
+26498-26501
+g_ctp_parm_filename       = "DBASE/COIN/general_55.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_55.param"
+
+#56. N-Delta 4c
+26503-26503
+g_ctp_parm_filename       = "DBASE/COIN/general_56.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_56.param"
+
+#57. N-Delta 5c
+26505-26506
+g_ctp_parm_filename       = "DBASE/COIN/general_57.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_57.param"
+
+#58. N-Delta 5c
+26507-26510
+g_ctp_parm_filename       = "DBASE/COIN/general_58.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_58.param"
+
+#59. N-Delta 2c
+26522-26527
+g_ctp_parm_filename       = "DBASE/COIN/general_59.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_59.param"
+
+#60. N-Delta 2c
+26528-26528
+g_ctp_parm_filename       = "DBASE/COIN/general_60.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_60.param"
+
+#54. N-Delta 3c
+26529-26532
+g_ctp_parm_filename       = "DBASE/COIN/general_54.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_54.param"
+
+#61. N-Delta 6c
+26535-26541
+g_ctp_parm_filename       = "DBASE/COIN/general_61.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_61.param"
+
+#62. N-Delta 7c
+26542-26549
+g_ctp_parm_filename       = "DBASE/COIN/general_62.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_62.param"
+
+#63. N-Delta 3c
+26550-26551
+g_ctp_parm_filename       = "DBASE/COIN/general_63.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_63.param"
+
+#56. N-Delta 4c
+26552-26552
+g_ctp_parm_filename       = "DBASE/COIN/general_56.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_56.param"
+
+#55. N-Delta 4c
+26553-26553
+g_ctp_parm_filename       = "DBASE/COIN/general_55.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_55.param"
+
+#57. N-Delta 5c
+26554-26554
+g_ctp_parm_filename       = "DBASE/COIN/general_57.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_57.param"
+
+#64. N-Delta 1e
+26555-26555
+g_ctp_parm_filename       = "DBASE/COIN/general_64.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_64.param"
+
+#65. N-Delta 1e
+26556-26559
+g_ctp_parm_filename       = "DBASE/COIN/general_65.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_65.param"
+
+#66. VCS2 1a
+26566-26567
+g_ctp_parm_filename       = "DBASE/COIN/general_66.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_66.param"
+
+#67. VCS2 1a
+26568-26588
+g_ctp_parm_filename       = "DBASE/COIN/general_67.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_67.param"
+
+#68. VCS2 1a
+26589-26589
+g_ctp_parm_filename       = "DBASE/COIN/general_68.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_68.param"
+
+#69. VCS2 2a
+26590-26592
+g_ctp_parm_filename       = "DBASE/COIN/general_69.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_69.param"
+
+#70. VCS2 2a
+26594-26596
+g_ctp_parm_filename       = "DBASE/COIN/general_70.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_70.param"
+
+#69. VCS2 2a
+26598-26611
+g_ctp_parm_filename       = "DBASE/COIN/general_69.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_69.param"
+
+#71. VCS2 2a
+26614-26626
+g_ctp_parm_filename       = "DBASE/COIN/general_71.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_71.param"
+
+#72. VCS2 3a
+26631-26634
+g_ctp_parm_filename       = "DBASE/COIN/general_72.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_72.param"
+
+#73. VCS2 3a
+26636-26640
+g_ctp_parm_filename       = "DBASE/COIN/general_73.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_73.param"
+
+#74. VCS2 3a
+26641-26651
+g_ctp_parm_filename       = "DBASE/COIN/general_74.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_74.param"
+
+#75. VCS2 3a
+26652-26691
+g_ctp_parm_filename       = "DBASE/COIN/general_75.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_75.param"
+
+#76. VCS2 4a
+26696-26699
+g_ctp_parm_filename       = "DBASE/COIN/general_76.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_76.param"
+
+#77. VCS2 4a
+26700-26723
+g_ctp_parm_filename       = "DBASE/COIN/general_77.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_77.param"
+
+#78. VCS2 5a
+26724-26725
+g_ctp_parm_filename       = "DBASE/COIN/general_78.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_78.param"
+
+#79. VCS2 5a
+26726-26748
+g_ctp_parm_filename       = "DBASE/COIN/general_79.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_79.param"
+
+#80. VCS2 6a
+26750-26751
+g_ctp_parm_filename       = "DBASE/COIN/general_80.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_80.param"
+
+#81. VCS2 6a This includes configs 91, 92, 93, which are target boiling studies.
+26752-26768
+g_ctp_parm_filename       = "DBASE/COIN/general_81.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_81.param"
+
+#82. VCS2 1c
+26769-26769
+g_ctp_parm_filename       = "DBASE/COIN/general_82.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_82.param"
+
+#83. VCS2 1c
+26771-26783
+g_ctp_parm_filename       = "DBASE/COIN/general_83.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_83.param"
+
+#84. VCS2 1c
+26784-26784
+g_ctp_parm_filename       = "DBASE/COIN/general_84.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_84.param"
+
+#82. VCS2 1c
+26785-26787
+g_ctp_parm_filename       = "DBASE/COIN/general_82.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_82.param"
+
+#84. VCS2 1c
+26788-26803
+g_ctp_parm_filename       = "DBASE/COIN/general_84.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_84.param"
+
+#85. VCS2 2c
+26806-26808
+g_ctp_parm_filename       = "DBASE/COIN/general_85.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_85.param"
+
+#86. VCS2 2c
+26810-26829
+g_ctp_parm_filename       = "DBASE/COIN/general_86.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_86.param"
+
+#85. VCS2 2c
+26830-26830
+g_ctp_parm_filename       = "DBASE/COIN/general_85.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_85.param"
+
+#87. VCS2 3c
+26831-26833
+g_ctp_parm_filename       = "DBASE/COIN/general_87.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_87.param"
+
+#88. VCS2 3c
+26834-26882
+g_ctp_parm_filename       = "DBASE/COIN/general_88.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_88.param"
+
+#89. VCS2 4c
+26884-26888
+g_ctp_parm_filename       = "DBASE/COIN/general_89.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_89.param"
+
+#90. VCS2 4c
+26890-26897
+g_ctp_parm_filename       = "DBASE/COIN/general_90.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_90.param"
+
+#90. VCS2 4c
+26942-26958
+g_ctp_parm_filename       = "DBASE/COIN/general_90.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_90.param"
+
+#94. VCS2 5c
+26959-26962
+g_ctp_parm_filename       = "DBASE/COIN/general_94.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_94.param"
+
+#95. VCS2 5c
+26963-27009
+g_ctp_parm_filename       = "DBASE/COIN/general_95.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_95.param"
+
+#96. VCS2 6c
+27010-27014
+g_ctp_parm_filename       = "DBASE/COIN/general_96.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_96.param"
+
+#97. VCS2 6c
+27017-27037
+g_ctp_parm_filename       = "DBASE/COIN/general_97.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_97.param"
+
+#98. VCS2 7c
+27040-27042
+g_ctp_parm_filename       = "DBASE/COIN/general_98.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_98.param"
+
+#99. VCS2 7c
+27043-27079
+g_ctp_parm_filename       = "DBASE/COIN/general_99.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_99.param"
+
+#Others
+27080-99999
+g_ctp_parm_filename       = "DBASE/COIN/general.param"
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin.param"
