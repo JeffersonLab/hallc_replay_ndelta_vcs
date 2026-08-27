@@ -80,8 +80,8 @@ void replay_production_coin_pElec_hProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   SHMS->AddEvtType(7);
   gHaApps->Add(SHMS);
   // Add Noble Gas Cherenkov to SHMS apparatus
-  THcCherenkov* pngcer = new THcCherenkov("ngcer", "Noble Gas Cherenkov");
-  SHMS->AddDetector(pngcer);
+  // THcCherenkov* pngcer = new THcCherenkov("ngcer", "Noble Gas Cherenkov");
+  // SHMS->AddDetector(pngcer);
   // Add drift chambers to SHMS apparatus
   THcDC* pdc = new THcDC("dc", "Drift Chambers");
   SHMS->AddDetector(pdc);
@@ -92,8 +92,8 @@ void replay_production_coin_pElec_hProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   THcCherenkov* phgcer = new THcCherenkov("hgcer", "Heavy Gas Cherenkov");
   SHMS->AddDetector(phgcer);
   // Add Aerogel Cherenkov to SHMS apparatus
-  THcAerogel* paero = new THcAerogel("aero", "Aerogel");
-  SHMS->AddDetector(paero);
+  // THcAerogel* paero = new THcAerogel("aero", "Aerogel");
+  // SHMS->AddDetector(paero);
   // Add calorimeter to SHMS apparatus
   THcShower* pcal = new THcShower("cal", "Calorimeter");
   SHMS->AddDetector(pcal);
