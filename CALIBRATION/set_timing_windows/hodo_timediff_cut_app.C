@@ -371,15 +371,36 @@ std::vector<double> SplitNumbers(const TString& s) {
   return out;
 }
 
+// Stops at the first line that ISN'T a pure numeric continuation of the
+// value list: blank, starts with ';' (comment), or starts with a letter/
+// underscore (the next key's assignment). NOT simply "next blank line" --
+// several real param files stack multiple single-line keys back-to-back
+// with no blank line between them (e.g. pcal_cuts.param's four Preshower
+// window keys, phgcer_cuts.param's Min/Max pair at EOF with no trailing
+// blank line), and the old blank-line-only version would silently swallow
+// the next several keys' values into one oversized block.
 TString ExtractBlock(const TString& text, const TString& key) {
   Ssiz_t start = text.Index(key);
   if (start == kNPOS) return "";
   Ssiz_t eqPos = text.Index("=", start);
   if (eqPos == kNPOS) return "";
-  Ssiz_t blockStart = eqPos + 1;
-  Ssiz_t blankPos = text.Index("\n\n", blockStart);
-  Ssiz_t end = (blankPos == kNPOS) ? text.Length() : blankPos;
-  return text(blockStart, end - blockStart);
+  Ssiz_t pos = eqPos + 1;
+  Ssiz_t n = text.Length();
+  Ssiz_t end = n;
+  while (pos < n) {
+    Ssiz_t nl = text.Index("\n", pos);
+    Ssiz_t lineEnd = (nl == kNPOS) ? n : nl;
+    TString line = text(pos, lineEnd - pos);
+    Ssiz_t i = 0;
+    while (i < line.Length() && (line[i] == ' ' || line[i] == '\t' || line[i] == '\r')) ++i;
+    if (i >= line.Length() || line[i] == ';' || isalpha((unsigned char)line[i]) || line[i] == '_') {
+      end = pos;
+      break;
+    }
+    if (nl == kNPOS) { end = n; break; }
+    pos = nl + 1;
+  }
+  return text(eqPos + 1, end - (eqPos + 1));
 }
 
 // ---- shared in-memory result type: channel key -> cut window ----
