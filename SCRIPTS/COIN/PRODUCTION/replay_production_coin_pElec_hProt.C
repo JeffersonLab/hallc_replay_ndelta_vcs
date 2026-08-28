@@ -47,8 +47,8 @@ void replay_production_coin_pElec_hProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
 
   //Now remove all Timing Windows and revert to 
   //the default values specifid in hallc_replay
-    gHcParms->AddString("g_ctp_no_timing_windows_filename", "PARAM/SHMS/GEN/pdet_cuts_no_timing_windows.param");
-    gHcParms->Load(gHcParms->GetString("g_ctp_no_timing_windows_filename"));
+  //  gHcParms->AddString("g_ctp_no_timing_windows_filename", "PARAM/SHMS/GEN/pdet_cuts_no_timing_windows.param");
+  //  gHcParms->Load(gHcParms->GetString("g_ctp_no_timing_windows_filename"));
 
   //Overwrite the existing reference times with
   //the default values specified in hallc_replay.  
@@ -57,8 +57,8 @@ void replay_production_coin_pElec_hProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
 
   //Now remove all Timing Windows and revert to 
   //the default values specifid in hallc_replay
-    gHcParms->AddString("g_ctp_no_timing_windows_filename", "PARAM/HMS/GEN/hdet_cuts_no_timing_windows.param");
-    gHcParms->Load(gHcParms->GetString("g_ctp_no_timing_windows_filename"));
+  //  gHcParms->AddString("g_ctp_no_timing_windows_filename", "PARAM/HMS/GEN/hdet_cuts_no_timing_windows.param");
+  //  gHcParms->Load(gHcParms->GetString("g_ctp_no_timing_windows_filename"));
   
   //************************************************************
   // Load the Hall C detector map
