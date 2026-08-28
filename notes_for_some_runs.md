@@ -69,14 +69,14 @@
 * run dependence of SHMS 1X and 2X
   * 1H elastics (26148-26157): everything on
   * Delta scan (26448–26488): everything on
-  * N-Delta 1d,2d,3d,4d,6d settings: 1X {6,7,8} 2X {6,7,8,9}
+  * N-Delta 1d,2d,3d,4d,5d,6d settings 26158-26278: 1X {6,7,8} 2X {6,7,8,9}
   * N-Delta 7d setting run 26279, 26280: 1X {6,7,8} 2X {6,7,8,9}
   * N-Delta remaining 7d setting runs 26284-26299: 1X {5,6,7,8} 2X {5,6,7,8,9}
   * N-Delta 1a setting 26300, 26301: 1X {5,6,7,8} 2X {5,6,7,8,9}
   * N-Delta remaining 1a setting runs 26302-26311: 1X {4,5,6,7,8,9} 2X {4,5,6,7,8,9,10}
-  * N-Delta 3a, 4a, 5a, 6a, 7a, 1b, 2b, 3b, 4b, 5b, 6b, 7b, 1c: 1X {4,5,6,7,8,9} 2X {4,5,6,7,8,9,10}
-  * N-Delta 2c, 3c, 4c, 5c, 6, 7c, 1e setting: 1X {5,6,7,8,9} 2X {5,6,7,8,9,10}
-  * Entire VCS2 setting: 1X {5,6,7,8,9} 2X {5,6,7,8,9,10}
+  * N-Delta 2a, 3a, 4a, 5a, 6a, 7a, 1b, 2b, 3b, 4b, 5b, 6b, 7b, 1c 26312-26447: 1X {4,5,6,7,8,9} 2X {4,5,6,7,8,9,10}
+  * N-Delta 2c, 3c, 4c, 5c, 6, 7c, 1e setting 26491-26559: 1X {5,6,7,8,9} 2X {5,6,7,8,9,10}
+  * Entire VCS2 setting 26566-27080: 1X {5,6,7,8,9} 2X {5,6,7,8,9,10}
   * Note that N-Delta data was taken in the d-a-b-c order.
 
 ## HMS
