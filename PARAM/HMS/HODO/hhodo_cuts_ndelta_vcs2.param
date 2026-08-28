@@ -47,10 +47,10 @@ hhodo_adc_tdc_offset = 200., 200., 200., 200.
 ; variables = H.hod.(1x, 1y, 2x, 2y).GoodNeg(Pos)AdcTdcDiffTime
 
 ; hhodo_cuts.param -- STAGED by merge_hodo_qa.py, review before copying into PARAM/
-; generated 2026-08-27 17:00:46 from 9 file(s) in ./hodo_diff_qa
-; runs merged: [26088, 26169, 26369, 26382, 26549, 26567, 26772, 27064] (calibration run: 26088)
+; generated 2026-08-28 12:24:59 from 11 file(s) in ./hodo_diff_qa
+; runs merged: [26088, 26169, 26306, 26369, 26382, 26549, 26567, 26772, 27064] (calibration run: 26088)
 ; SHMS 2Y dead quartz bars and off-for-run SHMS 1X/2X PMTs were excluded per known dead-channel rules --
-; see hodo_diff_cuts_0.json for the full per-channel audit trail (source/contributors/ignored list)
+; see hodo_final_cuts_0.json for the full per-channel audit trail (source/contributors/ignored list)
 ; layout: PMT-major, plane-minor (row = PMT 1..16, columns = 1x,1y,2x,2y)
 
 hhodo_PosAdcTimeWindowMin = 26.65, 23.93, 22.31, 21.63,
@@ -124,6 +124,7 @@ hhodo_NegAdcTimeWindowMax = 40.93, 43.26, 44.53, 42.75,
 					  43.70, 0, 49.43, 0,
 					  44.88, 0, 42.40, 0
 ;
+
 
 hhodo_pos_ped_limit = 1000,1000,1000,1000,1000,1000,1000,1000                   
                       1000,1000,1000,1000,1000,1000,1000,1000                   
