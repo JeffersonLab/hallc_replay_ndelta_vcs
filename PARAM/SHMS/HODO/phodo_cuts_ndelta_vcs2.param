@@ -1,0 +1,149 @@
+; Cosmic flag for beta calculation
+
+pcosmicflag=0
+
+; for now manually set hte FADC mode
+;  1 == Use the pulse int - pulse ped
+;  2 == Use the sample integral - known ped
+;  3 == Use the sample integral - sample ped
+; if not set then defaults to use the raw pulse integral
+phodo_adc_mode=1
+
+; Set ptofusinginvadc=0 to use new hodo calibration parameters
+ptofusinginvadc=0
+; pstart_time_center center of allowed time window                             
+pstart_time_center = 86.                                                     
+
+; hstart_time_slop    1/2 width of time window                                  
+pstart_time_slop = 100.                                                       
+
+; pscin_tdc_min min/max P.hod.GoodPos(Neg)TdcTimeUnCorr
+; note that the params below are factor of 10 higher than
+; what is present in the respective leaf 
+pscin_tdc_min = 600
+pscin_tdc_max = 1100
+
+; pscin_tdc_to_time   scin tdc time per channel                                 
+pscin_tdc_to_time = 0.09766 ; 0.1 (See Log Entry 3574348)                                                   
+
+; tof and you figured out good values
+ptof_tolerance = 100.0
+                                                                               
+; shms_tof_params                                                              
+; pnum_scin_counters, phodo_zpos, phodo_center_coord, phodo_width               
+; are all calculated within p_init_scin                                         
+;    phodo_pos_coord and phodo_neg_coord are not yet used                                                                                                    
+phodo_slop = 2.,  2.,  4.,  4.    
+
+; phodo_tdc_offset is array of time offsets for all paddles in a plane
+;   to move the tdc after reference time subtraction to between 0 and 4000 channels.
+;phodo_tdc_offset = 1860, 2000, 2060, 2000
+phodo_tdc_offset = 2000, 2000, 2000, 2000
+
+; phodo_adc_tdc_offset is array of time offsets for all paddles in a plane
+;   to move the ADC pulse time after reference time subtraction to a reasonable time (ns).
+phodo_adc_tdc_offset = 200., 200., 200., 200.
+
+
+; SHMS Hodoscope TimeWindow Min/Max Cuts
+
+; SHMS Hodoscope Parameter File Containing TimeWindow Min/Max Cuts 
+
+; variables = P.hod.(1x, 1y, 2x, 2y).GoodNeg(Pos)AdcTdcDiffTime
+
+;                              1x                 1y              2x              2y 
+
+; phodo_cuts.param -- STAGED by merge_hodo_qa.py, review before copying into PARAM/
+; generated 2026-08-27 17:00:46 from 9 file(s) in ./hodo_diff_qa
+; runs merged: [26088, 26169, 26369, 26382, 26549, 26567, 26772, 27064] (calibration run: 26088)
+; SHMS 2Y dead quartz bars and off-for-run SHMS 1X/2X PMTs were excluded per known dead-channel rules --
+; see hodo_diff_cuts_0.json for the full per-channel audit trail (source/contributors/ignored list)
+; layout: PMT-major, plane-minor (row = PMT 1..21, columns = 1x,1y,2x,2y)
+
+phodo_PosAdcTimeWindowMin = 15.27, 12.24, 15.53, -10,
+					  14.82, 10.68, 15.53, -10,
+					  15.42, 11.07, 14.56, 28.55,
+					  -34.37, 8.99, 8.67, 24.68,
+					  6.32, 2.56, 4.87, -10,
+					  5.71, 2.87, 4.87, 24.66,
+					  5.53, 5.49, 4.28, 23.77,
+					  9.05, 3.93, 4.87, 17.14,
+					  3.87, 1.89, 3.88, 21.13,
+					  12.54, 1.91, 4.48, 18.34,
+					  15.40, 4.68, 14.30, 21.71,
+					  14.30, 3.58, 15.73, 22.68,
+					  15.27, 10.96, 14.62, 22.68,
+					  -10, -10, 15.53, 23.47,
+					  -10, -10, -10, 22.26,
+					  -10, -10, -10, 22.35,
+					  -10, -10, -10, 24.48,
+					  -10, -10, -10, 22.46,
+					  -10, -10, -10, -10,
+					  -10, -10, -10, -10,
+					  -10, -10, -10, -10
+
+phodo_PosAdcTimeWindowMax = 28.02, 31.48, 27.42, 60,
+					  30.15, 31.64, 30.54, 60,
+					  25.90, 32.43, 26.32, 56.32,
+					  79.19, 39.42, 35.33, 55.79,
+					  36.68, 33.33, 41.53, 60,
+					  39.11, 33.67, 36.68, 55.11,
+					  36.90, 40.67, 37.13, 57.17,
+					  38.01, 33.95, 38.76, 56.53,
+					  38.01, 34.35, 39.28, 57.08,
+					  29.57, 36.04, 35.38, 55.22,
+					  28.85, 34.86, 27.62, 56.85,
+					  30.35, 36.16, 27.36, 56.96,
+					  26.51, 32.26, 26.38, 57.02,
+					  50, 50, 27.29, 57.06,
+					  50, 50, 50, 56.43,
+					  50, 50, 50, 61.43,
+					  50, 50, 50, 59.62,
+					  50, 50, 50, 57.52,
+					  50, 50, 50, 60,
+					  50, 50, 50, 60,
+					  50, 50, 50, 60
+
+phodo_NegAdcTimeWindowMin = 7.41, 11.48, 8.65, -10,
+					  7.61, 10.26, 9.36, -10,
+					  8.65, 8.11, 7.28, 21.85,
+					  2.40, 12.02, 1.23, 19.47,
+					  -2.57, 10.11, -4.44, 20.18,
+					  -0.74, 6.27, -1.47, 17.41,
+					  0.55, 8.09, -2.85, 21.95,
+					  -1.39, 6.70, -3.65, 21.71,
+					  -2.49, 6.28, -6.42, 17.88,
+					  8.58, 1.38, -5.23, 18.41,
+					  9.49, 5.93, 8.58, 14.79,
+					  8.71, 9.81, 8.45, 17.24,
+					  9.62, 10.94, 7.22, 15.86,
+					  -10, -10, 8.58, 13.62,
+					  -10, -10, -10, 16.50,
+					  -10, -10, -10, 17.84,
+					  -10, -10, -10, 22.32,
+					  -10, -10, -10, 22.10,
+					  -10, -10, -10, -10,
+					  -10, -10, -10, -10,
+					  -10, -10, -10, -10
+
+phodo_NegAdcTimeWindowMax = 17.61, 34.68, 17.68, 50,
+					  23.52, 35.98, 20.47, 50,
+					  22.61, 37.82, 18.52, 46.58,
+					  29.44, 32.66, 33.75, 45.36,
+					  29.89, 33.96, 28.85, 44.42,
+					  27.86, 40.03, 33.64, 43.88,
+					  31.73, 41.67, 33.35, 44.42,
+					  33.76, 40.67, 31.80, 47.58,
+					  32.10, 36.53, 30.66, 47.95,
+					  21.45, 35.13, 29.70, 44.44,
+					  25.67, 34.09, 21.38, 45.73,
+					  22.48, 34.76, 21.77, 45.55,
+					  21.32, 31.51, 18.52, 44.61,
+					  50, 50, 18.78, 47.21,
+					  50, 50, 50, 45.03,
+					  50, 50, 50, 44.82,
+					  50, 50, 50, 49.23,
+					  50, 50, 50, 46.24,
+					  50, 50, 50, 50,
+					  50, 50, 50, 50,
+					  50, 50, 50, 50
