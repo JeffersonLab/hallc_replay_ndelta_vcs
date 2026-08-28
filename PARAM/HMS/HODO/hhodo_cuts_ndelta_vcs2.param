@@ -1,3 +1,51 @@
+; HMS Hodo Cuts parameters
+
+; Cosmic flag for beta calculation
+hcosmicflag=0
+
+; for now manually set hte FADC mode
+;  1 == Use the pulse int - pulse ped
+;  2 == Use the sample integral - known ped
+;  3 == Use the sample integral - sample ped
+; if not set then defaults to use the raw pulse integral
+hhodo_adc_mode=1
+; Set htofusinginvadc=0 to use new hodo calibration parameters
+htofusinginvadc=0
+; 
+; hstart_time_center  center of allowed time window (ns)
+   hstart_time_center = 32.                                                     
+; hstart_time_slop    1/2 width of time window                                  
+   hstart_time_slop = 100.      
+
+; pscin_tdc_min min/max H.hod.GoodPos(Neg)TdcTimeUnCorr
+; note that the params below are factor of 10 higher than
+; what is present in the respective leaf 
+hscin_tdc_min = 0
+hscin_tdc_max = 1200
+
+; hscin_tdc_to_time   scin tdc time per channel                                 
+   hscin_tdc_to_time = 0.09766   ;0.1 was before Dave Mack found the correct conversion in C1190 Manual (May 14, 2018); (See HC Log Entry 3574348)
+
+; tof and you figured out good values
+   htof_tolerance = 20.0
+;                                                                               
+; hms_tof_params                                                                
+; hnum_scin_counters, hhodo_zpos, hhodo_center_coord, hhodo_width               
+; are all calculated within h_init_scin                                         
+;    hhodo_pos_coord and hhodo_neg_coord are not yet used                       
+                                                                               
+hhodo_slop     =    2.,  2.,  4.,  4.                                      
+
+; hhodo_tdc_offset is array of time offsets for all paddles in a plane
+;   to move the tdc to between 0 and 4000 channels.
+hhodo_tdc_offset = 1580, 1580, 1580, 1580
+
+hhodo_adc_tdc_offset = 200., 200., 200., 200.
+
+; HMS Hodoscope Parameter File Containing TimeWindow Min/Max Cuts 
+
+; variables = H.hod.(1x, 1y, 2x, 2y).GoodNeg(Pos)AdcTdcDiffTime
+
 ; hhodo_cuts.param -- STAGED by merge_hodo_qa.py, review before copying into PARAM/
 ; generated 2026-08-27 17:00:46 from 9 file(s) in ./hodo_diff_qa
 ; runs merged: [26088, 26169, 26369, 26382, 26549, 26567, 26772, 27064] (calibration run: 26088)
@@ -21,6 +69,7 @@ hhodo_PosAdcTimeWindowMin = 26.65, 23.93, 22.31, 21.63,
 					  18.95, 0, 24.84, 0,
 					  24.32, 0, 24.30, 0,
 					  25.04, 0, 23.93, 0
+;
 
 hhodo_PosAdcTimeWindowMax = 42.05, 42.77, 42.60, 41.54,
 					  44.42, 44.99, 43.70, 43.88,
@@ -38,6 +87,7 @@ hhodo_PosAdcTimeWindowMax = 42.05, 42.77, 42.60, 41.54,
 					  46.34, 0, 40.78, 0,
 					  47.29, 0, 45.36, 0,
 					  45.91, 0, 42.22, 0
+;
 
 hhodo_NegAdcTimeWindowMin = 22.37, 22.44, 23.23, 19.43,
 					  19.87, 20.98, 23.84, 22.51,
@@ -55,6 +105,7 @@ hhodo_NegAdcTimeWindowMin = 22.37, 22.44, 23.23, 19.43,
 					  23.75, 0, 25.52, 0,
 					  24.30, 0, 23.54, 0,
 					  25.14, 0, 26.08, 0
+;
 
 hhodo_NegAdcTimeWindowMax = 40.93, 43.26, 44.53, 42.75,
 					  46.85, 44.81, 44.07, 45.36,
@@ -72,3 +123,38 @@ hhodo_NegAdcTimeWindowMax = 40.93, 43.26, 44.53, 42.75,
 					  42.90, 0, 42.57, 0,
 					  43.70, 0, 49.43, 0,
 					  44.88, 0, 42.40, 0
+;
+
+hhodo_pos_ped_limit = 1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+;                                                                               
+hhodo_neg_ped_limit = 1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000                   
+                      1000,1000,1000,1000,1000,1000,1000,1000  
+     hhodo_vel_light =  15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     
+                        15.0,15.0,15.0,15.0                                     

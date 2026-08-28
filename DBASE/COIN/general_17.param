@@ -28,7 +28,7 @@ cminch=2.54
 ; HMS default cut parameter files
 #include "PARAM/HMS/CER/hcer_cuts.param"
 #include "PARAM/HMS/DC/hdc_cuts.param"
-#include "PARAM/HMS/HODO/hhodo_cuts.param"
+#include "PARAM/HMS/HODO/hhodo_cuts_ndelta_vcs2.param"
 #include "PARAM/HMS/AERO/haero_cuts.param"
 #include "PARAM/HMS/CAL/hcal_cuts.param"
 
@@ -61,7 +61,7 @@ cminch=2.54
 ; SHMS default cut parameter files
 #include "PARAM/SHMS/NGCER/pngcer_cuts.param"
 #include "PARAM/SHMS/DC/pdc_cuts.param"
-#include "PARAM/SHMS/HODO/phodo_cuts.param"
+#include "PARAM/SHMS/HODO/phodo_cuts_ndelta_vcs2.param"
 #include "PARAM/SHMS/HGCER/phgcer_cuts.param"
 #include "PARAM/SHMS/AERO/paero_cuts.param"
 #include "PARAM/SHMS/CAL/pcal_cuts.param"
