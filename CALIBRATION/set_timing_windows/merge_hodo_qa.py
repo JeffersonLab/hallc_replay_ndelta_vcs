@@ -17,24 +17,36 @@ RULES
    Any cut reported for these is ignored outright. Falls back to the
    vanilla PARAM/SHMS/HODO/phodo_cuts.param default.
 
-2) Production-run-dependent -- SHMS 1X and 2X on/off PMTs. The calibration
-   run (26088) is EXEMPT from this filter (its cuts are always trusted for
-   every 1X/2X PMT). For any other run:
-     26165 <= run < 26284:  1X on = {5,6,7}          2X on = {5,6,7,8}
-     26284 <= run < 26302:  1X on = {5,6,7,8}         2X on = {5,6,7,8,9}
-     run >= 26302:          1X on = {5,6,7,8,9}       2X on = {5,6,7,8,9,10}
-   A cut reported by a NON-calibration run's file for a 1X/2X PMT NOT in
-   that run's on-list is ignored (that channel was physically off, so the
-   "cut" is presumably noise/background, not a real hit distribution).
+2) EXEMPT run ranges -- SHMS 1X/2X fully illuminated, no filtering at all
+   (same treatment as calibration):
+     26148-26157 (1H elastics), 26448-26488 (Delta scan)
 
-3) Because calibration is exempt from (2) and just gets folded into the
-   same union pool as valid production entries, a 1X/2X PMT that's off in
-   EVERY production bracket naturally ends up using only the calibration
-   run's value once filtering removes everything else -- no separate case
-   needed for "other 1x/2x PMTs must come from 26088".
+3) Setting-dependent -- SHMS 1X and 2X on/off PMTs, for specific run
+   ranges (calibration and the exempt ranges above are excluded from this):
+     26158-26278:  1X on = {6,7,8}          2X on = {6,7,8,9}        (N-Delta 1d-6d)
+     26279-26280:  1X on = {6,7,8}          2X on = {6,7,8,9}        (N-Delta 7d)
+     26284-26299:  1X on = {5,6,7,8}        2X on = {5,6,7,8,9}      (N-Delta 7d remaining)
+     26300-26301:  1X on = {5,6,7,8}        2X on = {5,6,7,8,9}      (N-Delta 1a)
+     26302-26311:  1X on = {4,5,6,7,8,9}    2X on = {4,5,6,7,8,9,10} (N-Delta 1a remaining)
+     26312-26447:  1X on = {4,5,6,7,8,9}    2X on = {4,5,6,7,8,9,10} (N-Delta 2a-1c)
+     26491-26559:  1X on = {5,6,7,8,9}      2X on = {5,6,7,8,9,10}   (N-Delta 2c-1e)
+     26566-27080:  1X on = {5,6,7,8,9}      2X on = {5,6,7,8,9,10}   (VCS2)
+   A cut for a 1X/2X PMT NOT in that run's on-list is ignored (that channel
+   was physically off, so the "cut" is presumably noise/background, not a
+   real hit distribution). A run outside every known range/exemption above
+   is ALSO ignored (conservative -- unvalidated rather than guessed) -- the
+   only remaining gaps are the transitions between named settings (e.g.
+   26281-26283, 26489-26490, 26560-26565).
 
-4) Final fallback, anything still completely unresolved (no valid
-   contribution survives filtering, and no calibration entry exists
+4) Because calibration/exempt runs are excluded from (3) and just get
+   folded into the same union pool as valid setting-matched entries, a
+   1X/2X PMT that's off in every KNOWN setting naturally ends up using
+   only the calibration/exempt-run value once filtering removes
+   everything else -- no separate case needed for "other 1x/2x PMTs must
+   come from 26088".
+
+5) Final fallback, anything still completely unresolved (no valid
+   contribution survives filtering, and no calibration/exempt entry exists
    either): the vanilla PARAM/{SHMS,HMS}/HODO/{p,h}hodo_cuts.param default,
    parsed the same PMT-major/plane-minor way the C++ tools do, with (0,0)
    treated as "disabled paddle, no reference" -- same convention.
@@ -86,20 +98,39 @@ DEAD_2Y = {
     "Neg": {1, 2, 19, 20, 21},
 }
 
-# Rule 2: SHMS 1X/2X on-lists by production-run bracket
-# (lo_inclusive, hi_exclusive_or_None, {"1x": set, "2x": set})
+# Rule 2a: EXEMPT run ranges -- SHMS 1X/2X fully illuminated, no filtering
+# at all (same treatment as the calibration run). Both ends INCLUSIVE.
+EXEMPT_RANGES = [
+    (26148, 26157, "1H elastics"),
+    (26448, 26488, "Delta scan"),
+]
+
+# Rule 2b: SHMS 1X/2X on-lists by run range. Both ends INCLUSIVE (matches
+# how these were given -- e.g. "26279, 26280" or "26284-26299").
 BRACKETS = [
-    (26165, 26284, {"1x": {5, 6, 7},           "2x": {5, 6, 7, 8}}),
-    (26284, 26302, {"1x": {5, 6, 7, 8},        "2x": {5, 6, 7, 8, 9}}),
-    (26302, None,  {"1x": {5, 6, 7, 8, 9},      "2x": {5, 6, 7, 8, 9, 10}}),
+    (26158, 26278, {"1x": {6, 7, 8},           "2x": {6, 7, 8, 9}},            "N-Delta 1d-6d"),
+    (26279, 26280, {"1x": {6, 7, 8},           "2x": {6, 7, 8, 9}},            "N-Delta 7d"),
+    (26284, 26299, {"1x": {5, 6, 7, 8},        "2x": {5, 6, 7, 8, 9}},         "N-Delta 7d remaining"),
+    (26300, 26301, {"1x": {5, 6, 7, 8},        "2x": {5, 6, 7, 8, 9}},         "N-Delta 1a"),
+    (26302, 26311, {"1x": {4, 5, 6, 7, 8, 9},  "2x": {4, 5, 6, 7, 8, 9, 10}},  "N-Delta 1a remaining"),
+    (26312, 26447, {"1x": {4, 5, 6, 7, 8, 9},  "2x": {4, 5, 6, 7, 8, 9, 10}},  "N-Delta 2a-1c"),
+    (26491, 26559, {"1x": {5, 6, 7, 8, 9},     "2x": {5, 6, 7, 8, 9, 10}},     "N-Delta 2c-1e"),
+    (26566, 27080, {"1x": {5, 6, 7, 8, 9},     "2x": {5, 6, 7, 8, 9, 10}},     "VCS2"),
 ]
 
 
+def is_exempt_run(run):
+    for lo, hi, label in EXEMPT_RANGES:
+        if lo <= run <= hi:
+            return label
+    return None
+
+
 def bracket_for_run(run):
-    for lo, hi, onlists in BRACKETS:
-        if run >= lo and (hi is None or run < hi):
+    for lo, hi, onlists, label in BRACKETS:
+        if lo <= run <= hi:
             return onlists
-    return None  # run < 26165, or otherwise outside every known bracket
+    return None  # outside every known range/setting
 
 
 def is_dead_2y(spec, plane, side, ipmt):
@@ -110,15 +141,16 @@ def is_dead_2y(spec, plane, side, ipmt):
 
 def is_1x2x_off_for_run(spec, plane, run, ipmt):
     """True if this (spec,plane,ipmt) contribution should be dropped
-    because the PMT was off for THIS run's production bracket. Always
-    False for HMS, non-1x/2x planes, or the calibration run (exempt)."""
+    because the PMT was off for THIS run's setting. Always False for HMS,
+    non-1x/2x planes, the calibration run, or an EXEMPT (fully-illuminated)
+    range -- all treated the same way (trusted for every PMT)."""
     if spec != "p" or plane not in ("1x", "2x"):
         return False
-    if run == CALIBRATION_RUN:
+    if run == CALIBRATION_RUN or is_exempt_run(run):
         return False
     onlists = bracket_for_run(run)
     if onlists is None:
-        # run isn't in any known bracket -- can't validate it, so don't
+        # run isn't in any known range -- can't validate it, so don't
         # silently trust it either; treat as off/ignore and flag it
         return True
     return ipmt not in onlists[plane]
