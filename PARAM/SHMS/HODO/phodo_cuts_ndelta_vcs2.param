@@ -54,16 +54,16 @@ phodo_adc_tdc_offset = 200., 200., 200., 200.
 ;                              1x                 1y              2x              2y 
 
 ; phodo_cuts.param -- STAGED by merge_hodo_qa.py, review before copying into PARAM/
-; generated 2026-08-27 17:00:46 from 9 file(s) in ./hodo_diff_qa
-; runs merged: [26088, 26169, 26369, 26382, 26549, 26567, 26772, 27064] (calibration run: 26088)
+; generated 2026-08-28 12:24:59 from 11 file(s) in ./hodo_diff_qa
+; runs merged: [26088, 26169, 26306, 26369, 26382, 26549, 26567, 26772, 27064] (calibration run: 26088)
 ; SHMS 2Y dead quartz bars and off-for-run SHMS 1X/2X PMTs were excluded per known dead-channel rules --
-; see hodo_diff_cuts_0.json for the full per-channel audit trail (source/contributors/ignored list)
+; see hodo_final_cuts_0.json for the full per-channel audit trail (source/contributors/ignored list)
 ; layout: PMT-major, plane-minor (row = PMT 1..21, columns = 1x,1y,2x,2y)
 
 phodo_PosAdcTimeWindowMin = 15.27, 12.24, 15.53, -10,
 					  14.82, 10.68, 15.53, -10,
 					  15.42, 11.07, 14.56, 28.55,
-					  -34.37, 8.99, 8.67, 24.68,
+					  6.62, 8.99, 8.67, 24.68,
 					  6.32, 2.56, 4.87, -10,
 					  5.71, 2.87, 4.87, 24.66,
 					  5.53, 5.49, 4.28, 23.77,
@@ -85,7 +85,7 @@ phodo_PosAdcTimeWindowMin = 15.27, 12.24, 15.53, -10,
 phodo_PosAdcTimeWindowMax = 28.02, 31.48, 27.42, 60,
 					  30.15, 31.64, 30.54, 60,
 					  25.90, 32.43, 26.32, 56.32,
-					  79.19, 39.42, 35.33, 55.79,
+					  33.49, 39.42, 36.07, 55.79,
 					  36.68, 33.33, 41.53, 60,
 					  39.11, 33.67, 36.68, 55.11,
 					  36.90, 40.67, 37.13, 57.17,
@@ -107,7 +107,7 @@ phodo_PosAdcTimeWindowMax = 28.02, 31.48, 27.42, 60,
 phodo_NegAdcTimeWindowMin = 7.41, 11.48, 8.65, -10,
 					  7.61, 10.26, 9.36, -10,
 					  8.65, 8.11, 7.28, 21.85,
-					  2.40, 12.02, 1.23, 19.47,
+					  -1.28, 12.02, -1.28, 19.47,
 					  -2.57, 10.11, -4.44, 20.18,
 					  -0.74, 6.27, -1.47, 17.41,
 					  0.55, 8.09, -2.85, 21.95,
@@ -129,7 +129,7 @@ phodo_NegAdcTimeWindowMin = 7.41, 11.48, 8.65, -10,
 phodo_NegAdcTimeWindowMax = 17.61, 34.68, 17.68, 50,
 					  23.52, 35.98, 20.47, 50,
 					  22.61, 37.82, 18.52, 46.58,
-					  29.44, 32.66, 33.75, 45.36,
+					  32.12, 32.66, 33.75, 45.36,
 					  29.89, 33.96, 28.85, 44.42,
 					  27.86, 40.03, 33.64, 43.88,
 					  31.73, 41.67, 33.35, 44.42,

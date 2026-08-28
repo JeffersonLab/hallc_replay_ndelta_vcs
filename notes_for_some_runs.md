@@ -22,7 +22,7 @@
   + HMS hodoscope HV reduced by 50 V https://logbooks.jlab.org/entry/4482276
   + The reason is elaborated in https://logbooks.jlab.org/entry/4482336
 * 26165
-  + SHMS 1X used 5,6,7 and 2X used 5,6,7,8 https://logbooks.jlab.org/entry/4482320
+  + SHMS 1X used 6,7,8 and 2X used 6,7,8,9 https://logbooks.jlab.org/entry/4482320
 * 26190
   + hcvme01 FADC250 offset change and width https://logbooks.jlab.org/entry/4482537
   + HMS window changed by 25 ns during the 1d setting https://logbooks.jlab.org/entry/4482569
@@ -39,7 +39,7 @@
 * 26448
   + SHMS 1X and 2X used all paddles for carbon elastics https://logbooks.jlab.org/entry/4489047
 * 26489
-  + SHMS 1X and 2X back to production setting https://logbooks.jlab.org/entry/4489361
+  + SHMS 1X used 5,6,7,8,9 and 2X used 5,6,7,8,9,10 on setting https://logbooks.jlab.org/entry/4489361
 * 26593 
   + VCS 2a, interrupted by Moller measurement
 * 26612
@@ -58,4 +58,30 @@
   + SHMS coin window 40 ns -> 20 ns https://logbooks.jlab.org/entry/4501416
 * End
   + The delay setting from hardware at the end of VCS2: https://logbooks.jlab.org/entry/4505989
+
+# Hodoscope summary
+
+## SHMS
+
+* PMTs permanently off
+  * SHMS 2y Pos: 1, 2, 5, 19, 20, 21
+  * SHMS 2y Neg: 1, 2, 19, 20, 21
+* run dependence of SHMS 1X and 2X
+  * 1H elastics (26148-26157): everything on
+  * Delta scan (26448–26488): everything on
+  * N-Delta 1d,2d,3d,4d,5d,6d settings 26158-26278: 1X {6,7,8} 2X {6,7,8,9}
+  * N-Delta 7d setting run 26279, 26280: 1X {6,7,8} 2X {6,7,8,9}
+  * N-Delta remaining 7d setting runs 26284-26299: 1X {5,6,7,8} 2X {5,6,7,8,9}
+  * N-Delta 1a setting 26300, 26301: 1X {5,6,7,8} 2X {5,6,7,8,9}
+  * N-Delta remaining 1a setting runs 26302-26311: 1X {4,5,6,7,8,9} 2X {4,5,6,7,8,9,10}
+  * N-Delta 2a, 3a, 4a, 5a, 6a, 7a, 1b, 2b, 3b, 4b, 5b, 6b, 7b, 1c 26312-26447: 1X {4,5,6,7,8,9} 2X {4,5,6,7,8,9,10}
+  * N-Delta 2c, 3c, 4c, 5c, 6, 7c, 1e setting 26491-26559: 1X {5,6,7,8,9} 2X {5,6,7,8,9,10}
+  * Entire VCS2 setting 26566-27080: 1X {5,6,7,8,9} 2X {5,6,7,8,9,10}
+  * Note that N-Delta data was taken in the d-a-b-c order.
+
+## HMS
+
+* Entire N-Delta and VCS2 a setting: HV - 50V
+* VCS2 c setting: HV back to R-SIDIS setting
+  
 
