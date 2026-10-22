@@ -13241,690 +13241,1064 @@ ppcentral = 1.325
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26148 - 26148
+#2. N-Delta 1H Elastics (Q2=0.176 GeV2 p_p' = 430 MeV/c) 4 cm LH2
+26148 - 26150
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -68.74
+gtargmass_amu = 1.00794
+htheta_lab = -68.735
 hpcentral = 0.43
-ptheta_lab = 17.6
+ptheta_lab = 17.5975
 ppcentral = 1.325
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26149 - 26149
-gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -68.74
-hpcentral = 0.43
-ptheta_lab = 17.6
-ppcentral = 1.325
-ppartmass = 0.000511
-hpartmass = 0.938272
-
-26150 - 26150
-gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -68.74
-hpcentral = 0.43
-ptheta_lab = 17.6
-ppcentral = 1.325
-ppartmass = 0.000511
-hpartmass = 0.9382726
-
+#3. N-Delta 1H Elastics (Q2=0.234 GeV2 p_p' = 500 MeV/c) 4 cm LH2
 26151 - 26154
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -65.48
+gtargmass_amu = 1.00794
+htheta_lab = -65.425
 hpcentral = 0.5
-ptheta_lab = 20.58
+ptheta_lab = 20.8325
 ppcentral = 1.294
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26155 - 26157
+#4. N-Delta 1H Elastics (Q2=0.329 GeV2 p_p' = 600 MeV/c HMS centered at 580 MeV/c) 4 cm LH2
+26155 - 26164
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
+gtargmass_amu = 1.00794
+htheta_lab = -60.945
 hpcentral = 0.58
-ptheta_lab = 24.96
+ptheta_lab = 24.9625
 ppcentral = 1.243
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-
-26158 - 26204
+#5. N-Delta 1d 4 cm LH2
+26165 - 26189
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
 htheta_lab = -26.725
 hpcentral = 0.571
-ptheta_lab = 10.49
+ptheta_lab = 10.485
 ppcentral = 1.0553
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26205 - 26226
+#6. N-Delta 1d 4 cm LH2
+26190 - 26197
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -32.65
+gtargmass_amu = 1.00794
+htheta_lab = -26.725
+hpcentral = 0.571
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#7. N-Delta 1d 4 cm Dummy
+26198 - 26204
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -26.725
+hpcentral = 0.571
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#8. N-Delta 2d 4 cm LH2
+26205 - 26221
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -32.645
 hpcentral = 0.566
-ptheta_lab = 10.49
+ptheta_lab = 10.485
 ppcentral = 1.0553
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26227 - 26242
+#9. N-Delta 2d Dummy
+26222 - 26226
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
+htheta_lab = -32.645
+hpcentral = 0.566
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#10. N-Delta 3d 4 cm LH2
+26227 - 26239
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
 htheta_lab = -13.755
 hpcentral = 0.546
-ptheta_lab = 10.49
+ptheta_lab = 10.485
 ppcentral = 1.0553
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26243 - 26259
+#11. N-Delta 3d 4 cm Dummy
+26240 - 26242
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
+htheta_lab = -13.755
+hpcentral = 0.546
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#12. N-Delta 4d 4 cm LH2
+26243 - 26257
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
 htheta_lab = -39.72
 hpcentral = 0.546
-ptheta_lab = 10.49
+ptheta_lab = 10.485
 ppcentral = 1.0553
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26260 - 26270
+#13. N-Delta 4d 4 cm Dummy
+26258 - 26259
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
+htheta_lab = -39.72
+hpcentral = 0.546
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#14. N-Delta 5d 4 cm LH2
+26260 - 26268
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
 htheta_lab = -48.18
 hpcentral = 0.502
-ptheta_lab = 10.49
+ptheta_lab = 10.485
 ppcentral = 1.0553
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26271 - 26278
+#15. N-Delta 5d 4 cm Dummy
+26269 - 26270
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -55.662
+gtargmass_amu = 1.00794
+htheta_lab = -48.18
+hpcentral = 0.502
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#16. N-Delta 6d 4 cm LH2
+26271 - 26277
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -55.665
 hpcentral = 0.445
-ptheta_lab = 10.49
+ptheta_lab = 10.485
 ppcentral = 1.0553
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26279 - 26299
+#17. N-Delta 6d 4 cm Dummy
+26278 - 26278
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
+htheta_lab = -55.665
+hpcentral = 0.445
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#18. N-Delta 7d 4 cm LH2
+26279 - 26283
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
 htheta_lab = -59.205
 hpcentral = 0.412
-ptheta_lab = 10.49
+ptheta_lab = 10.485
 ppcentral = 1.0553
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26300 - 26311 
+#19. N-Delta 7d 4 cm LH2
+26284 - 26294
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
+htheta_lab = -59.205
+hpcentral = 0.412
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#20. N-Delta 7d 4 cm Dummy
+26295 - 26301
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -59.205
+hpcentral = 0.412
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#21. N-Delta 1a 4 cm LH2
+26302 - 26309
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
 htheta_lab = -21.19
 hpcentral = 0.536
-ptheta_lab = 7.50
+ptheta_lab = 7.5
 ppcentral = 1.0681
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26312 - 26326
+#22. N-Delta 1a 4 cm Dummy
+26310 - 26311
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -14.902
+gtargmass_amu = 1.00794
+htheta_lab = -21.19
+hpcentral = 0.536
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#23. N-Delta 2a 4 cm LH2
+26312 - 26324
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -14.9025
 hpcentral = 0.531
-ptheta_lab = 7.50
+ptheta_lab = 7.5
 ppcentral = 1.0681
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26327 - 26336
+#24. N-Delta 2a 4 cm Dummy
+26325 - 26326
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
+htheta_lab = -14.9025
+hpcentral = 0.531
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#25. N-Delta 3a 4 cm LH2
+26327 - 26334
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
 htheta_lab = -27.49
 hpcentral = 0.531
-ptheta_lab = 7.50
+ptheta_lab = 7.5
 ppcentral = 1.0681
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26337 - 26348
+#26. N-Delta 3a 4 cm Dummy
+26335 - 26336
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -35.86
+gtargmass_amu = 1.00794
+htheta_lab = -27.49
+hpcentral = 0.531
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#27. N-Delta 4a 4 cm LH2
+26337 - 26344
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -35.854
 hpcentral = 0.509
-ptheta_lab = 7.50
+ptheta_lab = 7.5
 ppcentral = 1.0681
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26349 - 26357
+#28. N-Delta 4a 4 cm Dummy
+26345 - 26347
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
+gtargmass_amu = 1.00794
+htheta_lab = -35.854
+hpcentral = 0.509
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#27. N-Delta 4a 4 cm LH2
+26348 - 26348
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -35.854
+hpcentral = 0.509
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#29. N-Delta 5a 4 cm LH2
+26349 - 26355
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
 htheta_lab = -44.145
-hpcentral = 0.470
-ptheta_lab = 7.50
+hpcentral = 0.47
+ptheta_lab = 7.5
 ppcentral = 1.0681
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-
-26358 - 26368
+#30. N-Delta 5a 4 cm Dummy
+26356 - 26357
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -52.250
+htheta_lab = -44.145
+hpcentral = 0.47
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#31. N-Delta 6a 4 cm LH2
+26358 - 26360
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -52.2465
 hpcentral = 0.416
-ptheta_lab = 7.50
-ppcentral =  1.0681
+ptheta_lab = 7.5
+ppcentral = 1.0681
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-
-26369 - 26381
+#32. N-Delta 6a 4 cm LH2
+26361 - 26366
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -56.170
+htheta_lab = -52.2465
+hpcentral = 0.416
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#33. N-Delta 6a 4 cm Dummy
+26367 - 26368
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -52.2465
+hpcentral = 0.416
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#34. N-Delta 7a 4 cm LH2
+26369 - 26370
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -56.17
 hpcentral = 0.384
-ptheta_lab = 7.50
-ppcentral =  1.0681
+ptheta_lab = 7.5
+ppcentral = 1.0681
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26382 - 26389
+#35. N-Delta 7a 4 cm Dummy
+26371 - 26372
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -22.930
+htheta_lab = -56.17
+hpcentral = 0.384
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#34. N-Delta 7a 4 cm LH2
+26373 - 26381
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -56.17
+hpcentral = 0.384
+ptheta_lab = 7.5
+ppcentral = 1.0681
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#36. N-Delta 1b 4 cm LH2
+26382 - 26382
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -22.93
 hpcentral = 0.545
 ptheta_lab = 8.345
-ppcentral =  1.0649
+ppcentral = 1.0649
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26390 - 26397
+#37. N-Delta 1b 4 cm Dummy
+26383 - 26384
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -29.120
-hpcentral = 0.540
+htheta_lab = -22.93
+hpcentral = 0.545
 ptheta_lab = 8.345
-ppcentral =  1.0649
+ppcentral = 1.0649
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26398 - 26403
+#36. N-Delta 1b 4 cm LH2
+26385 - 26389
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -14.117
+htheta_lab = -22.93
+hpcentral = 0.545
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#38. N-Delta 2b 4 cm LH2
+26390 - 26396
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -29.12
+hpcentral = 0.54
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#39. N-Delta 2b 4 cm Dummy
+26397 - 26397
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -29.12
+hpcentral = 0.54
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#40. N-Delta 3b 4 cm LH2
+26398 - 26402
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -14.118
 hpcentral = 0.535
 ptheta_lab = 8.345
-ppcentral =  1.0649
+ppcentral = 1.0649
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26404 - 26409
+#41. N-Delta 3b 4 cm Dummy
+26403 - 26404
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -37.349
+htheta_lab = -14.118
+hpcentral = 0.535
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#42. N-Delta 4b 4 cm LH2
+26405 - 26408
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -37.35
 hpcentral = 0.518
 ptheta_lab = 8.345
-ppcentral =  1.0649
+ppcentral = 1.0649
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26410 - 26414
+#43. N-Delta 4b 4 cm Dummy
+26409 - 26409
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -45.485
+htheta_lab = -37.35
+hpcentral = 0.518
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#44. N-Delta 5b 4 cm LH2
+26410 - 26413
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -45.485
 hpcentral = 0.478
 ptheta_lab = 8.345
-ppcentral =  1.0649
+ppcentral = 1.0649
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26415 - 26420
+#45. N-Delta 5b 4 cm Dummy
+26414 - 26414
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -53.385
+htheta_lab = -45.485
+hpcentral = 0.478
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#46. N-Delta 6b 4 cm LH2
+26415 - 26419
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -53.382
 hpcentral = 0.424
 ptheta_lab = 8.345
-ppcentral =  1.0649
+ppcentral = 1.0649
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26421 - 26427
+#47. N-Delta 6b 4 cm Dummy
+26420 - 26420
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -57.23
+htheta_lab = -53.382
+hpcentral = 0.424
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#48. N-Delta 7b 4 cm LH2
+26421 - 26426
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -57.23
 hpcentral = 0.391
 ptheta_lab = 8.345
-ppcentral =  1.0649
+ppcentral = 1.0649
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26428 - 26447
+#49. N-Delta 7b 4 cm Dummy
+26427 - 26427
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -24.93
+htheta_lab = -57.23
+hpcentral = 0.391
+ptheta_lab = 8.345
+ppcentral = 1.0649
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#50. N-Delta 1c 4 cm LH2
+26428 - 26435
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
 hpcentral = 0.557
 ptheta_lab = 9.35
-ppcentral =  1.0606
+ppcentral = 1.0606
 ppartmass = 0.000511
 hpartmass = 0.938272
 
+#51. N-Delta 1c 4 cm Dummy
+26436 - 26437
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.557
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#50. N-Delta 1c 4 cm LH2
+26438 - 26447
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.557
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#52. N-Delta SHMS Delta Scan Optics1
 26448 - 26448
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.6097
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.6097
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26449 - 26449
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5916
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5916
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26450 - 26450
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5827
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5827
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26451 - 26451
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5739
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5739
 ppartmass = 0.000511
 hpartmass = 0.000511
 
-26452 - 26452
+#52. N-Delta SHMS Delta Scan Optics1
+26452 - 26453
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5652
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5652
 ppartmass = 0.000511
 hpartmass = 0.000511
 
-26453 - 26454
+#52. N-Delta SHMS Delta Scan Optics1
+26454 - 26454
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5566
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5566
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26455 - 26455
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5481
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5481
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26456 - 26457
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5397
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5397
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26458 - 26458
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5231
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5231
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26459 - 26459
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.5069
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.5069
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26460 - 26460
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.4911
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.4911
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26461 - 26461
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.4755
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.4755
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26462 - 26462
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.4603
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.4603
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26463 - 26463
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.4454
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.4454
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26464 - 26464
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.4308
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.4308
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26465 - 26465
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.4165
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.4165
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26466 - 26466
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.4025
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.4025
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26467 - 26467
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.3887
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.3887
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26468 - 26468
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.3753
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.3753
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26469 - 26469
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.3620
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.362
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26470 - 26470
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.3491
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.3491
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26471 - 26471
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.3363
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.3363
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26472 - 26472
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.3238
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.3238
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26473 - 26473
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.3116
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.3116
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26474 - 26474
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2996
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2996
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26475 - 26475
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2877
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2877
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26476 - 26476
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2761
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2761
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26477 - 26477
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2647
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2647
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26478 - 26478
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2535
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2535
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26479 - 26479
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2426
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2426
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26480 - 26480
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2317
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2317
 ppartmass = 0.000511
 hpartmass = 0.000511
 
-26481 - 26481
+#52. N-Delta SHMS Delta Scan Optics1
+26481 - 26482
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2211
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2211
 ppartmass = 0.000511
 hpartmass = 0.000511
 
-26482 - 26483
+#52. N-Delta SHMS Delta Scan Optics1
+26483 - 26483
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2107
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2107
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26484 - 26484
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.2004
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.2004
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26485 - 26485
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.1903
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.1903
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26486 - 26486
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.1804
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.1804
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26487 - 26487
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.1707
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.1707
 ppartmass = 0.000511
 hpartmass = 0.000511
 
+#52. N-Delta SHMS Delta Scan Optics1
 26488 - 26488
 gpbeam = 1.424427
-gtargmass_amu =  1.00794 
-htheta_lab = -60.94
-hpcentral = 1.1611
-ptheta_lab = 24.93
-ppcentral = 0.400
+gtargmass_amu = 1.00794
+htheta_lab = -24.9375
+hpcentral = 0.4
+ptheta_lab = 9.35
+ppcentral = 1.1611
 ppartmass = 0.000511
 hpartmass = 0.000511
 
-26490 - 26491
-gpbeam= 1.424427
+#53. N-Delta HMS SIEVE Optics1
+26489 - 26490
+gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab = -24.93
-hpcentral = 0.400
+htheta_lab = -24.9375
+hpcentral = 0.4
 ptheta_lab = 9.35
 ppcentral = 1.1611
-ppartmass = 0.0005109
-hpartmass = 0.938272
+ppartmass = 0.000511
+hpartmass = 0.000511
 
-26492 - 26497
+#54. N-Delta 3c 4 cm LH2
+26491 - 26497
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
 htheta_lab = -13.72
-hpcentral = 0.540
+hpcentral = 0.54
 ptheta_lab = 9.35
 ppcentral = 1.0606
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26498 - 26503
+#55. N-Delta 4c 4 cm LH2
+26498 - 26501
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab = -38.929
-hpcentral = 0.520
+htheta_lab = -38.925
+hpcentral = 0.52
 ptheta_lab = 9.35
 ppcentral = 1.0606
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26504 - 26519
+#56. N-Delta 4c 4 cm Dummy
+26502 - 26503
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -38.925
+hpcentral = 0.52
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#57. N-Delta 5c 4 cm Dummy
+26504 - 26506
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
 htheta_lab = -46.86
@@ -13934,214 +14308,540 @@ ppcentral = 1.0606
 ppartmass = 0.000511
 hpartmass = 0.938272
 
-26520 - 26528
+#58. N-Delta 5c 4 cm LH2
+26507 - 26520
 gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab = -30.888
+htheta_lab = -46.86
+hpcentral = 0.489
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#59. N-Delta 2c 4 cm LH2
+26521 - 26527
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -30.885
 hpcentral = 0.552
 ptheta_lab = 9.35
 ppcentral = 1.0606
 ppartmass = 0.000511
 hpartmass = 0.938272
 
+#60. N-Delta 2c 4 cm Dummy
+26528 - 26528
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -30.885
+hpcentral = 0.552
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
 
+#54. N-Delta 3c 4 cm LH2
 26529 - 26532
 gpbeam = 1.424427
-gtargmass_amu=1.00794
-htheta_lab=-13.723
-hpcentral=0.540
-ptheta_lab=9.35
-ppcentral=1.0606
-ppartmass=0.000511
-hpartmass=0.938272
+gtargmass_amu = 1.00794
+htheta_lab = -13.7225
+hpcentral = 0.54
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
 
+#61. N-Delta 6c 4 cm LH2
 26533 - 26541
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-54.555
-hpcentral=0.433
-ptheta_lab=9.35
-ppcentral=1.0606
-ppartmass=0.000511
-hpartmass=0.938272
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -54.5525
+hpcentral = 0.433
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
 
+#62. N-Delta 7c 4 cm LH2
 26542 - 26549
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-58.28
-hpcentral=0.400
-ptheta_lab=9.35
-ppcentral=1.0606
-ppartmass=0.000511
-hpartmass=0.938272
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -58.28
+hpcentral = 0.433
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
 
+#63. N-Delta 3c 4 cm Dummy
 26550 - 26551
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-13.720
-hpcentral=0.540
-ptheta_lab=9.35
-ppcentral=1.0606
-ppartmass=0.000511
-hpartmass=0.938272
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -13.72
+hpcentral = 0.54
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
 
-26552 - 26553
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-38.920
-hpcentral=0.520
-ptheta_lab=9.35
-ppcentral=1.0606
-ppartmass=0.000511
-hpartmass=0.938272
+#56. N-Delta 4c 4 cm Dummy
+26552 - 26552
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -38.9225
+hpcentral = 0.52
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
 
+#55. N-Delta 4c 4 cm LH2
+26553 - 26553
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -38.9225
+hpcentral = 0.52
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#57. N-Delta 5c 4 cm Dummy
 26554 - 26554
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-46.89
-hpcentral=0.489
-ptheta_lab=9.35
-ppcentral=1.0606
-ppartmass=0.000511
-hpartmass=0.938272
-
-26555 - 26564
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-13.67
-hpcentral=0.575
-ptheta_lab=10.48
-ppcentral=1.0553
-ppartmass=0.000511
-hpartmass=0.938272
-
-26565 - 26589
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-35.145
-hpcentral=0.5920
-ptheta_lab=10.48
-ppcentral=1.0553
-ppartmass=0.000511
-hpartmass=0.938272
-
-26590 - 26626
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-18.29
-hpcentral=0.5920
-ptheta_lab=10.48
-ppcentral=1.0553
-ppartmass=0.000511
-hpartmass=0.938272
-
-26627 - 26691
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-39.765
-hpcentral=0.5750
-ptheta_lab=10.48
-ppcentral=1.0553
-ppartmass=0.000511
-hpartmass=0.938272
-
-
-26692 - 26723
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-13.675
-hpcentral=0.5750
-ptheta_lab=10.48
-ppcentral=1.0553
-ppartmass=0.000511
-hpartmass=0.938272
-
-26724 - 26748
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-46.470
-hpcentral=0.5480
-ptheta_lab=10.48
-ppcentral=1.0553
-ppartmass=0.000511
-hpartmass=0.938272
-
-26749 - 26768
-gpbeam=1.424427
-gtargmass_amu=1.00794
-htheta_lab=-55.995
-hpcentral=0.484
-ptheta_lab=10.48
-ppcentral=1.0553
-ppartmass=0.000511
-hpartmass=0.938272
-
-26769 - 26803
-gpbeam=2.1132
-gtargmass_amu=1.00794
-htheta_lab=-36.435
-hpcentral=0.830
-ptheta_lab=15.465
-ppcentral=1.6387
-ppartmass=0.000511
-hpartmass=0.938272
-
-26804 - 26830
-gpbeam=2.1132
-gtargmass_amu=1.00794
-htheta_lab=-42.577
-hpcentral=0.830
-ptheta_lab=15.465
-ppcentral=1.6387
-ppartmass=0.000511
-hpartmass=0.938272
-
-26831 - 26884
-gpbeam=2.1132
-gtargmass_amu=1.00794
-htheta_lab=-30.355
-hpcentral=0.804
-ptheta_lab=15.465
-ppcentral=1.6387
-ppartmass=0.000511
-hpartmass=0.938272
-
-26885 - 26958
-gpbeam= 2.1132
+gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -48.667
-hpcentral= 0.804
-ptheta_lab= 15.465
-ppcentral= 1.6387
-ppartmass= 0.000511
-hpartmass= 0.938272
+htheta_lab = -46.89
+hpcentral = 0.489
+ptheta_lab = 9.35
+ppcentral = 1.0606
+ppartmass = 0.000511
+hpartmass = 0.938272
 
-26959 - 27009
-gpbeam= 2.1132
+#64. N-Delta 1e 4 cm Dummy
+26555 - 26555
+gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -24.455
-hpcentral= 0.753
-ptheta_lab= 15.465
-ppcentral= 1.6387
-ppartmass= 0.000511
-hpartmass= 0.938272
+htheta_lab = -13.67
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
 
-27010 - 27038
-gpbeam= 2.1132
+#65. N-Delta 1e 4 cm LH2
+26556 - 26565
+gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -54.51
-hpcentral= 0.753
-ptheta_lab= 15.465
-ppcentral= 1.6387
-ppartmass= 0.000511
-hpartmass= 0.938272
+htheta_lab = -13.67
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
 
-27039 - 99999
-gpbeam= 2.1132
+#66. VCS2 1a 10 cm dummy
+26566 - 26567
+gpbeam = 1.424427
 gtargmass_amu = 1.00794
-htheta_lab= -20.228
-hpcentral= 0.701
-ptheta_lab= 15.465
-ppcentral= 1.6387
-ppartmass= 0.000511
-hpartmass= 0.938272
+htheta_lab = -35.1475
+hpcentral = 0.592
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#67. VCS2 1a 10 cm LH2
+26568 - 26588
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -35.1475
+hpcentral = 0.592
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#68. VCS2 1a 10 cm Dummy
+26589 - 26589
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -35.1475
+hpcentral = 0.592
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#69. VCS2 2a 10 cm LH2
+26590 - 26593
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -18.29
+hpcentral = 0.592
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#70. VCS2 2a 10 cm Dummy
+26594 - 26596
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -18.29
+hpcentral = 0.592
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#69. VCS2 2a 10 cm LH2
+26597 - 26612
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -18.29
+hpcentral = 0.592
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#71. VCS2 2a 10 cm LH2
+26613 - 26626
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -18.29
+hpcentral = 0.592
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#72. VCS2 3a 10 cm dummy
+26627 - 26634
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -39.765
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#73. VCS2 3a 10 cm LH2
+26635 - 26640
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -39.765
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#74. VCS2 3a 10 cm LH2
+26641 - 26651
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -39.765
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#75. VCS2 3a 10 cm LH2
+26652 - 26695
+gpbeam = 1.424427
+gtargmass_amu = 1.00794
+htheta_lab = -39.765
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#76. VCS2 4a 10 cm Dummy
+26696 - 26699
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -13.675
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#77. VCS2 4a 10 cm LH2
+26700 - 26723
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -13.675
+hpcentral = 0.575
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#78. VCS2 5a 10 cm Dummy
+26724 - 26725
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -46.47
+hpcentral = 0.548
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#79. VCS2 5a 10 cm LH2
+26726 - 26748
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -46.47
+hpcentral = 0.548
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#80. VCS2 6a 10 cm Dummy
+26749 - 26751
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -55.995
+hpcentral = 0.484
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#81. VCS2 6a 10 cm LH2
+26752 - 26768
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -55.995
+hpcentral = 0.484
+ptheta_lab = 10.485
+ppcentral = 1.0553
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#82. VCS2 1c 10 cm Dummy
+26769 - 26769
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -36.435
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#83. VCS2 1c 10 cm LH2
+26770 - 26783
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -36.435
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#84. VCS2 1c 10 cm LH2
+26784 - 26784
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -36.435
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#82. VCS2 1c 10 cm Dummy
+26785 - 26787
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -36.435
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#84. VCS2 1c 10 cm LH2
+26788 - 26803
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -36.435
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#85. VCS2 2c 10 cm Dummy
+26804 - 26808
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -42.577
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#86. VCS2 2c 10 cm LH2
+26809 - 26829
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -42.577
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#85. VCS2 2c 10 cm Dummy
+26830 - 26830
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -42.577
+hpcentral = 0.83
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#87. VCS2 3c 10 cm Dummy
+26831 - 26833
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -30.355
+hpcentral = 0.804
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#88. VCS2 3c 10 cm LH2
+26834 - 26883
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -30.355
+hpcentral = 0.804
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#87. VCS2 3c 10 cm Dummy
+26884 - 26884
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -30.355
+hpcentral = 0.804
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#89. VCS2 4c 10 cm Dummy
+26885 - 26888
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -48.6695
+hpcentral = 0.804
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#90. VCS2 4c 10 cm LH2 This includes configs 91, 92, 93, which are target boiling studies.
+26889 - 26958
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -48.6695
+hpcentral = 0.804
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#94. VCS2 5c 10 cm Dummy
+26959 - 26962
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -24.455
+hpcentral = 0.753
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#95. VCS2 5c 10 cm LH2
+26963 - 27009
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -24.455
+hpcentral = 0.753
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#96. VCS2 6c 10 cm Dummy
+27010 - 27014
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -54.5135
+hpcentral = 0.753
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#97. VCS2 6c 10 cm LH2
+27015 - 27038
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -54.5135
+hpcentral = 0.753
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#98. VCS2 7c 10 cm Dummy
+27039 - 27042
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -20.229
+hpcentral = 0.701
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+#99. VCS2 7c 10 cm LH2
+27043 - 99999
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -20.229
+hpcentral = 0.701
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272
+
+27040 - 99999
+gpbeam = 2.1132
+gtargmass_amu = 1.00794
+htheta_lab = -20.229
+hpcentral = 0.701
+ptheta_lab = 15.4675
+ppcentral = 1.6387
+ppartmass = 0.000511
+hpartmass = 0.938272

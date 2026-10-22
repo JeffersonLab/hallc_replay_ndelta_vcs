@@ -70,7 +70,7 @@ Usage:
 
 qa_dir defaults to ./hodo_diff_qa and --param-dir defaults to ../../PARAM,
 so a bare invocation with no arguments at all covers the common case. With
-no -o given, output defaults to <qa_dir>/hodo_final_cuts_<version>.json
+no -o given, output defaults to <qa_dir>/hodo_diff_cuts_<version>.json
 (--version defaults to 0), and phodo_cuts.param/hhodo_cuts.param default to
 that same directory. A same-content compatibility copy is also written as
 <qa_dir>/hodo_diff_cuts_<version>.json -- the exact filename
@@ -251,7 +251,7 @@ def load_files(paths):
         except (json.JSONDecodeError, OSError) as e:
             print(f"WARNING: could not read {path}: {e}", file=sys.stderr)
             continue
-        # This script's own outputs (hodo_final_cuts_<v>.json and its
+        # This script's own outputs (hodo_diff_cuts_<v>.json and its
         # hodo_diff_cuts_<v>.json compatibility copy) now live inside
         # qa_dir by default, so a re-run's *.json glob will see them too.
         # Identify them by content (a "calibration_run" key, which only
@@ -378,7 +378,7 @@ def main():
                           "output files, and doubles as the pseudo run-number for a hodo_diff_cuts_<version>.json "
                           "compatibility copy -- see below.")
     ap.add_argument("-o", "--output", default=None,
-                     help="Output JSON path (default: <qa_dir>/hodo_final_cuts_<version>.json)")
+                     help="Output JSON path (default: <qa_dir>/hodo_diff_cuts_<version>.json)")
     ap.add_argument("-r", "--recursive", action="store_true", help="Search qa_dir recursively for *.json")
     ap.add_argument("--pattern", default="*.json", help="Glob pattern for input files (default: *.json)")
     ap.add_argument("--param-dir", default="../../PARAM", help="Path to PARAM/ for the vanilla fallback (default: ../../PARAM)")
@@ -392,7 +392,7 @@ def main():
     args = ap.parse_args()
 
     if args.output is None:
-        args.output = os.path.join(args.qa_dir, f"hodo_final_cuts_{args.version}.json")
+        args.output = os.path.join(args.qa_dir, f"hodo_diff_cuts_{args.version}.json")
 
     pattern = os.path.join(args.qa_dir, "**", args.pattern) if args.recursive else os.path.join(args.qa_dir, args.pattern)
     files = sorted(glob.glob(pattern, recursive=args.recursive))

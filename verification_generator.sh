@@ -27,10 +27,13 @@ cat > "$jobfile" <<EOF
 #SBATCH --output=${logdir}/verification_calib_${runnum}.out
 #SBATCH --error=${logdir}/verification_calib_${runnum}.err
 
-cd CALIBRATION/set_reftimes
+#cd CALIBRATION/set_reftimes
+cd CALIBRATION/set_timing_windows
 echo "Running run ${runnum} on \$(hostname)"
 
-root -l -b -q 'reftime_cut_app.C("all",${runnum},${runnum},true)'
+#root -l -b -q 'reftime_cut_app.C("all",${runnum},${runnum},true)'
+#root -l -b -q "other_det_timediff_cut_app.C(\"all\", ${runnum}, -1, true)";
+root -l -b -q "hodo_timediff_cut_app.C(${runnum}, 0, true)";
 EOF
 
 echo "Created: $jobfile"

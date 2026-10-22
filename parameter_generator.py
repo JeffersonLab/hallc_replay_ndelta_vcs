@@ -68,9 +68,28 @@ for target_value, group in enumerate(manual_groups):
     run_db.loc[mask, "Configuration"] = target_value + 1
 
     
+# Snapshot of all labelled runs (any status) before filtering, used to find true segment starts
+run_db_full = run_db[["Run Number", "Configuration"]].copy()
+
 run_db = run_db.loc[ (run_db["Run Number"] != 26084) & (run_db["Run Status"]!="Junk") & (run_db["Run Status"]!="Short") & (run_db["Target"]!="Carbon Hole") & (run_db["Kinematics Setting"]!="Beam Checkout") & (run_db["Target"]!="Home"), :]
 run_db.sort_values(by = 'Run Number', inplace = True)
-run_db["Configuration"] = pd.factorize(run_db["Configuration"])[0]
+codes, uniques = pd.factorize(run_db["Configuration"])
+run_db["Configuration"] = codes
+cfg_map = {raw: new for new, raw in enumerate(uniques)}
+
+# Start of each contiguous stretch of a configuration, counting runs of ANY status.
+# Only adjacent runs merge (a change of label breaks the segment), so 3c -> 4c -> 3c stays three segments.
+full = run_db_full.sort_values("Run Number").reset_index(drop=True)
+full["Configuration"] = full["Configuration"].map(cfg_map)   # NaN if a config has no surviving runs
+segment = (full["Configuration"] != full["Configuration"].shift()).cumsum()
+full["Segment Start"] = full.groupby(segment)["Run Number"].transform("min")
+full["Segment End"] = full.groupby(segment)["Run Number"].transform("max")
+run_db["Segment Start"] = run_db["Run Number"].map(
+    pd.Series(full["Segment Start"].to_numpy(), index=full["Run Number"].to_numpy())
+).astype(int)
+run_db["Segment End"] = run_db["Run Number"].map(
+    pd.Series(full["Segment End"].to_numpy(), index=full["Run Number"].to_numpy())
+).astype(int)
 
 # rng = np.random.default_rng(42)
 
@@ -363,6 +382,118 @@ def write_param_files_for_configuration(df, configuration, out_run=None, out_dir
     for p in paths:
         print(" ", p)
     return list(paths.keys())
+
+
+# ---------------------------------------------------------------------------
+# standard.kinematics generation (from rcdb_draft.csv)
+# ---------------------------------------------------------------------------
+ELECTRON_MASS = 0.000511
+PROTON_MASS   = 0.938272
+TARGMASS_AMU  = 1.00794   # always the proton, regardless of the target (see standard.kinematics header)
+KIN_FIRST_AUTO_RUN = 26148  # runs before this are hand-written in standard.kinematics (optics/checkout, SHMS p missing in rcdb)
+
+# Target boiling studies are reported under config 90 (see standard.database)
+CONFIG_ALIASES = {91: 90, 92: 90, 93: 90}
+
+KIN_COLS = ["Beam energy (GeV)",
+            "HMS Angle (deg)", "HMS Momentum (GeV/c)", "HMS Polarity",
+            "SHMS Angle (deg)", "SHMS Momentum (GeV/c)", "SHMS Polarity"]
+
+def _num(v):
+    """Shortest decimal string, no float noise (e.g. 1.424427, -46.47)."""
+    return repr(round(float(v), 6))
+
+def _partmass(polarity):
+    pol = str(polarity).strip().lower()
+    if pol == "electron":
+        return ELECTRON_MASS
+    if pol == "proton":
+        return PROTON_MASS
+    raise ValueError(f"Unknown polarity {polarity!r}")
+
+def config_header(configuration, experiment, kinematics, target):
+    """Comment header shared by standard.database and standard.kinematics."""
+    if "1H Elastics" in str(experiment):
+        return "#{}. {} {}\n".format(configuration, experiment, kinematics)
+    if configuration == 90:
+        return "#{}. {} {} {} This includes configs 91, 92, 93, which are target boiling studies.\n".format(
+            configuration, experiment, kinematics, target)
+    return "#{}. {} {} {}\n".format(configuration, experiment, kinematics, target)
+
+def generate_kinematics_text(run_db, first_run=KIN_FIRST_AUTO_RUN, last_run_max=99999):
+    """Build the standard.kinematics text from rcdb_draft.csv (run_db, already filtered).
+
+    Consecutive runs with identical (beam, HMS angle/p/particle, SHMS angle/p/particle)
+    are merged into one 'min - max' block. Each block ends the run before the next one
+    starts (same convention as the existing file); the last block ends at last_run_max.
+      htheta_lab : -|HMS angle|   hpcentral : |HMS momentum|   hpartmass from HMS polarity
+      ptheta_lab : +|SHMS angle|  ppcentral : |SHMS momentum|  ppartmass from SHMS polarity
+      gtargmass_amu : 1.00794 for every target
+    Runs with missing values are reported and skipped.
+    """
+    d = run_db.loc[run_db["Run Number"] >= first_run,
+                   ["Run Number", "Segment Start", "Configuration", "Experiment", "Kinematics Setting", "Target"] + KIN_COLS]
+    d = d.sort_values("Run Number")
+
+    bad = d[d[KIN_COLS].isna().any(axis=1)]
+    if len(bad):
+        print("WARNING: skipped runs with missing kinematics in rcdb:",
+              bad["Run Number"].astype(int).tolist())
+        d = d.drop(bad.index)
+
+    # Blocks also break when the (aliased) configuration changes, so headers match standard.database
+    d = d.assign(Cfg=d["Configuration"].replace(CONFIG_ALIASES).astype(int))
+    key = d[KIN_COLS].round(6).astype(str).agg("|".join, axis=1) + "|" + d["Cfg"].astype(str)
+    block_id = (key != key.shift()).cumsum()
+    d = d.assign(block=block_id.to_numpy())
+
+    # Segment Start applies only to the first block of each segment; later blocks inside
+    # the same segment (scans, angle jitter) start at their own first run.
+    blk = d.groupby("block").agg(run_min=("Run Number", "min"), seg=("Segment Start", "min"))
+    seg_first_run = d.groupby("Segment Start")["Run Number"].min()
+    is_seg_first = blk["run_min"] == blk["seg"].map(seg_first_run)
+    starts = np.where(is_seg_first, blk["seg"], blk["run_min"]).astype(int).tolist()
+    starts[0] = int(d["Run Number"].min())   # keep the first block anchored at first_run
+    ends = [s - 1 for s in starts[1:]] + [last_run_max]
+
+    txt = ""
+    for (_, g), lo, hi in zip(d.groupby("block", sort=True), starts, ends):
+        r = g.iloc[0]
+        txt += config_header(int(r["Cfg"]), r["Experiment"], r["Kinematics Setting"], r["Target"])
+        txt += f"{lo} - {hi}\n"
+        txt += f"gpbeam = {_num(r['Beam energy (GeV)'])}\n"
+        txt += f"gtargmass_amu = {TARGMASS_AMU}\n"
+        txt += f"htheta_lab = {_num(-abs(r['HMS Angle (deg)']))}\n"
+        txt += f"hpcentral = {_num(abs(r['HMS Momentum (GeV/c)']))}\n"
+        txt += f"ptheta_lab = {_num(abs(r['SHMS Angle (deg)']))}\n"
+        txt += f"ppcentral = {_num(abs(r['SHMS Momentum (GeV/c)']))}\n"
+        txt += f"ppartmass = {_num(_partmass(r['SHMS Polarity']))}\n"
+        txt += f"hpartmass = {_num(_partmass(r['HMS Polarity']))}\n\n"
+    return txt
+
+def check_unique_kinematics_per_period(run_db, group_col="Configuration"):
+    """For every run period (Configuration), list the kinematics columns that take more than
+    one distinct value. Returns a DataFrame; empty means every period is unique."""
+    out = []
+    # Contiguous periods (same as the standard.database periods); a Configuration can have several
+    rd = run_db.sort_values("Run Number")
+    pid = (rd[group_col] != rd[group_col].shift()).cumsum()
+    per = rd.assign(_p=pid.to_numpy()).groupby("_p").agg(
+        cfg=(group_col, "first"), lo=("Segment Start", "min"), hi=("Segment End", "max"))
+    period_ranges = {}
+    for cfg, lo, hi in zip(per["cfg"], per["lo"], per["hi"]):
+        period_ranges.setdefault(cfg, []).append(f"{int(lo)}-{int(hi)}")
+    for cfg, g in run_db.groupby(group_col):
+        for c in KIN_COLS:
+            col = g[c].dropna()
+            vals = col.round(6).unique() if pd.api.types.is_numeric_dtype(col) else col.unique()
+            if len(vals) > 1:
+                out.append({"Configuration": cfg, "column": c, "n_values": len(vals),
+                            "runs": ", ".join(period_ranges[cfg]),
+                            "values": list(vals)[:6]})
+    return pd.DataFrame(out)
+
+
 rows = [survey_row(run, config, tcoin_p, hms_p, shms_p)
         for run, config, tcoin_p, hms_p, shms_p in zip(run_numbers, configuration_params, tcoin_params, hms_params, shms_params)]
 df = pd.DataFrame(rows).set_index("run").sort_index()
@@ -375,8 +506,10 @@ changing_point_min          = run_configurations != run_configurations_next
 run_configurations_previous = list(run_configurations[1:]) + [99]
 changing_point_max          = run_configurations != run_configurations_previous
 
-run_period_mins     = [26088] +  list(run_db["Run Number"].to_numpy()[changing_point_min])
-run_period_maxs     = list(run_db["Run Number"].astype(int).to_numpy()[changing_point_max])  + [int(np.max(run_db["Run Number"]))]
+run_period_mins     = [26088] +  list(run_db["Segment Start"].to_numpy()[changing_point_min])  # Segment Start: includes adjacent short/junk runs carrying this config label
+run_period_maxs     = list(run_db["Segment End"].to_numpy()[changing_point_max])  + [int(np.max(run_db["Segment End"]))]
+MERGED_CONFIGS = {90}
+merged_done = set()
 for i in range(len(run_period_mins)):
   run_period_min = run_period_mins[i]
   run_period_max = run_period_maxs[i]
@@ -386,18 +519,31 @@ for i in range(len(run_period_mins)):
   this_configuration = this_configuration[0]
   if ~np.isin(this_configuration, df.configuration):#target boiling studies---the same with 90
     continue
-  write_param_files_for_configuration(df, this_configuration, out_dir_coin = "PARAM/TRIG", out_dir_hms = "PARAM/HMS/GEN", out_dir_shms = "PARAM/SHMS/GEN")
+
+  # Configs listed here are written as ONE entry spanning all their periods (e.g. config 90 is split
+  # by the target boiling studies 91-93, which have no entry of their own).
+  if this_configuration in MERGED_CONFIGS:
+    if this_configuration in merged_done:
+      continue
+    merged_done.add(this_configuration)
+    in_cfg = run_db["Configuration"] == this_configuration
+    run_period_min = int(run_db.loc[in_cfg, "Segment Start"].min())
+    run_period_max = int(run_db.loc[in_cfg, "Segment End"].max())
+
+  # Time window frozen as of Oct 1 2026. Uncomment this as needed.
+  # write_param_files_for_configuration(df, this_configuration, out_dir_coin = "PARAM/TRIG", out_dir_hms = "PARAM/HMS/GEN", out_dir_shms = "PARAM/SHMS/GEN")
+
   this_experiment    = run_db.loc[(run_db["Run Number"] >= run_period_min) & (run_db["Run Number"] <= run_period_max), "Experiment"].unique()[0]
   this_kinematics    = run_db.loc[(run_db["Run Number"] >= run_period_min) & (run_db["Run Number"] <= run_period_max), "Kinematics Setting"].unique()[0]
-  
-  if i == 0:
-    standard_database_txt = "#{}. {} {}\n".format(this_configuration, this_experiment, this_kinematics)
-  elif i == 90:
-    standard_database_txt = standard_database_txt+ "#{}. {} {} This includes configs 91, 92, 93, which are target boiling studies.\n".format(this_configuration, this_experiment, this_kinematics)
-  else:
-    standard_database_txt = standard_database_txt+ "#{}. {} {}\n".format(this_configuration, this_experiment, this_kinematics)
+  this_target        = run_db.loc[(run_db["Run Number"] >= run_period_min) & (run_db["Run Number"] <= run_period_max), "Target"].unique()[0]
 
-  standard_database_txt  = standard_database_txt+ "{}--{}\n".format(run_period_min, run_period_max)
+  header = config_header(this_configuration, this_experiment, this_kinematics, this_target)
+  if i == 0:
+    standard_database_txt = header
+  else:
+    standard_database_txt = standard_database_txt + header
+
+  standard_database_txt  = standard_database_txt+ "{}-{}\n".format(run_period_min, run_period_max)
   standard_database_txt  = standard_database_txt + 'g_ctp_parm_filename       = "DBASE/COIN/general_{}.param"\n'.format(this_configuration)
   standard_database_txt  = standard_database_txt + 'g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"\n'
   standard_database_txt  = standard_database_txt + 'g_ctp_map_filename        = "MAPS/COIN/DETEC/coin.map"\n'
@@ -408,9 +554,24 @@ for i in range(len(run_period_mins)):
     general_param_lines = general_param_template.readlines()
     
   general_param_this_run = copy(general_param_lines)
-  general_param_this_run[19-1] = general_param_this_run[19-1].replace('.param', '_{}.param'.format(this_configuration))
-  general_param_this_run[51-1] = general_param_this_run[51-1].replace('.param', '_{}.param'.format(this_configuration))
+  general_param_this_run[19-1] = general_param_this_run[19-1].replace('h_reftime_cut_coindaq.param', 'h_reftime_cut_coindaq_{}.param'.format(this_configuration))
+  general_param_this_run[31-1] = general_param_this_run[31-1].replace('hhodo_cuts.param', 'hhodo_cuts_ndelta_vcs2.param')
+  general_param_this_run[40-1] = general_param_this_run[40-1].replace('hhodo_TWcalib.param', 'hhodo_TWcalib_{}.param'.format(int(this_configuration>81)))
+  general_param_this_run[41-1] = general_param_this_run[41-1].replace('hhodo_Vpcalib.param', 'hhodo_Vpcalib_{}.param'.format(int(this_configuration>81)))
+  general_param_this_run[51-1] = general_param_this_run[51-1].replace('p_reftime_cut.param', 'p_reftime_cut_{}.param'.format(this_configuration))
+  general_param_this_run[64-1] = general_param_this_run[64-1].replace('phodo_cuts.param', 'phodo_cuts_ndelta_vcs2.param')
+  general_param_this_run[74-1] = general_param_this_run[74-1].replace('phodo_TWcalib.param', 'phodo_TWcalib_26483-26488.param')
+  general_param_this_run[75-1] = general_param_this_run[75-1].replace('phodo_Vpcalib.param', 'phodo_Vpcalib_26483-26488.param')
   with open("DBASE/COIN/general_{}.param".format(this_configuration), "w") as general_param_file_this_run:
     general_param_file_this_run.writelines(general_param_this_run)
 print(standard_database_txt)
 
+# standard.kinematics (paste from first_run on; earlier runs are hand-written)
+standard_kinematics_txt = generate_kinematics_text(run_db)
+print(standard_kinematics_txt)
+
+# Sanity check, expected hits: scans (configs 0, 1, 52) and small angle jitter (54-57, 89)
+kin_violations = check_unique_kinematics_per_period(run_db)
+if len(kin_violations):
+    print("Configurations with more than one kinematics value:")
+    print(kin_violations.to_string())

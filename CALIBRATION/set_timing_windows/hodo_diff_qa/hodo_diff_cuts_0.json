@@ -1,9 +1,9 @@
 {
-  "generated": "2026-08-28 12:24:59",
+  "generated": "2026-08-28 12:53:04",
   "calibration_run": 26088,
   "runs_present": [26088, 26169, 26306, 26369, 26382, 26549, 26567, 26772, 27064],
-  "source_files": ["hodo_diff_cuts_0.json", "hodo_diff_cuts_26088.json", "hodo_diff_cuts_26169.json", "hodo_diff_cuts_26306.json", "hodo_diff_cuts_26369.json", "hodo_diff_cuts_26382.json", "hodo_diff_cuts_26549.json", "hodo_diff_cuts_26567.json", "hodo_diff_cuts_26772.json", "hodo_diff_cuts_27064.json", "hodo_final_cuts_0.json"],
-  "n_source_files": 11,
+  "source_files": ["hodo_diff_cuts_26088.json", "hodo_diff_cuts_26169.json", "hodo_diff_cuts_26306.json", "hodo_diff_cuts_26369.json", "hodo_diff_cuts_26382.json", "hodo_diff_cuts_26549.json", "hodo_diff_cuts_26567.json", "hodo_diff_cuts_26772.json", "hodo_diff_cuts_27064.json"],
+  "n_source_files": 9,
   "n_channels": 226,
   "n_ignored_contributions": 351,
   "n_vanilla_fallback": 11,

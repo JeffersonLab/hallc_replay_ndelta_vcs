@@ -1,16 +1,16 @@
-// plotHodoPed.C
+// plotHodoAmp.C
 //
 // Usage:
-//   root -l -b -q plotHodoPed.C
+//   root -l -b -q plotHodoAmp.C
 // or from within ROOT:
-//   root [0] .x plotHodoPed.C
+//   root [0] .x plotHodoAmp.C
 //
 // For each run in `runs` below, reads
 // ROOTfiles/coin_replay_production_<run>_2000000_0.root and draws
-// P.hod.1x.GoodPosAdcPed vs P.hod.1x.GoodPosAdcTdcDiffTime side by
+// P.hod.1x.GoodPosAdcAmp vs P.hod.1x.GoodPosAdcTdcDiffTime side by
 // side on one canvas, then saves it as result_compare.pdf
 //
-// The x-axis binning (100, -30, 30) is fixed per your original code.
+// The x-axis binning (100, 10, 30) is fixed per your original code.
 // The y-axis range can either be set manually (yRange below) or
 // determined automatically from the data itself.
 //
@@ -20,18 +20,18 @@
 //                         to yHardMax. nbins from yRange is still used.
 //   autoRange = false -> the ymin/ymax in yRange are used as-is.
 
-void plotHodoPed(bool autoRange = false, double yHardMax = 1e3)
+void plotHodoAmp(bool autoRange = false, double yHardMax = 1e3)
 {
     // --- Runs to compare ---
-    std::vector<int> runs = {26088, 26169};
+    std::vector<int> runs = {26488, 26169};
 
     // --- Descriptive label appended to each run's plot title ---
     std::map<int, TString> runLabel = {
-        {26088, "carbon elastics"},
+        {26488, "carbon elastics"},
         {26169, "N-Delta LH2 1d"}
     };
 
-    TString yVar = "P.hod.1x.GoodPosAdcPed";
+    TString yVar = "P.hod.1x.GoodPosAdcPulseAmp";
     TString xVar = "P.hod.1x.GoodPosAdcTdcDiffTime";
 
     // --- Fixed x-axis binning ---
@@ -42,11 +42,11 @@ void plotHodoPed(bool autoRange = false, double yHardMax = 1e3)
     // --- Y-axis binning: {nbins, ymin, ymax} (used as-is if autoRange = false,
     // or just for nbins if autoRange = true) ---
     struct YRange { int nbins; double ymin; double ymax; };
-    YRange yRange = {40, 40, 80};
+    YRange yRange = {40, 0, 200};
 
     // --- Canvas ---
     gStyle->SetOptStat(0); // mute the stat box on all histograms
-    TCanvas *c1 = new TCanvas("c1", "c1", 1600, 700);
+    TCanvas *c1 = new TCanvas("c1", "c1", 1800, 700);
     c1->Clear();
     c1->Divide(2, 1);
 
@@ -56,7 +56,7 @@ void plotHodoPed(bool autoRange = false, double yHardMax = 1e3)
     for (size_t k = 0; k < runs.size(); k++) {
         int run = runs[k];
 
-        TString infile = Form("ROOTfiles/coin_replay_production_%d_2000000_0.root", run);
+        TString infile = Form("../../ROOTfiles/coin_replay_production_%d_2000000_0.root", run);
         TFile *f = TFile::Open(infile);
         if (!f || f->IsZombie()) {
             printf("ERROR: could not open %s\n", infile.Data());
